@@ -29,7 +29,7 @@ By the end of this workshop, you'll have hands-on experience with the complete t
 
 ### 👥 Your Trainers
 
-- **[Jan Chlebek](https://www.linkedin.com/in/jan-chlebek/)**
+- **[Bartosz Burger](https://www.linkedin.com/in/bartoszburger/)**
 - **[Michal Kachniarz](https://www.linkedin.com/in/michalkachniarz/)**
 - **[Przemyslaw Harazny](https://www.linkedin.com/in/przemyslaw-harazny/)**
 - **[Estera Kot](https://www.linkedin.com/in/esterakot/)**
