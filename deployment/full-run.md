@@ -241,4 +241,8 @@ Final discussion points:
 - [Microsoft Fabric Deployment Pipelines - Three Stages](https://learn.microsoft.com/fabric/cicd/deployment-pipelines/understand-stages) - Official three-stage documentation
 - [fabric-cli three-stage patterns](https://github.com/microsoft/fabric-cli) - CLI automation for complex pipelines
 - [fabric-cicd enterprise patterns](https://github.com/microsoft/fabric-cicd) - Python automation for enterprise deployments
-- [Workshop advanced scenarios](../versioning/) - Next-level deployment patterns
+
+---
+
+| [← Module 5: Deployment Pipelines](./start.md) | [Home](../README.md) | [Module 7: Azure DevOps →](./azuredevops.md) |
+|:-----------------------------------------------|:--------------------:|---------------------------------------------:|

@@ -529,3 +529,6 @@ Instructor will verify:
 **Instructor Sign-off**: _________________ **Time**: _______
 
 ---
+
+| [← Module 1: Environment Setup](../configuration/start.md) | [Home](../README.md) | [Module 3: Version Control →](../versioning/start.md) |
+|:----------------------------------------------------------|:--------------------:|------------------------------------------------------:|

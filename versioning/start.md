@@ -497,8 +497,9 @@ Workspace settings → Git integration → Disconnect
 > **[→ Click here to start Module 4: Branch Management](../deployment/branch-out.md)**
 
 > [!TIP]
-> **Pro Tip:** From now on, all your changes are tracked! Make meaningful commit messages - your future self will thank you. 😊
+> **Pro Tip:** From now on, all your changes are tracked! Make meaningful commit messages - your future self will thank you.
 
 ---
 
-**Need help?** Ask your instructor or review the [Git integration documentation](https://learn.microsoft.com/fabric/cicd/git-integration/intro-to-git-integration)
+| [← Module 2: First Deployment](../deployment/bootstrap.md) | [Home](../README.md) | [Module 4: Branch Management →](../deployment/branch-out.md) |
+|:-----------------------------------------------------------|:--------------------:|-------------------------------------------------------------:|

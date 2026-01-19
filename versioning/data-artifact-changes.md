@@ -401,3 +401,8 @@ The foundation you've built provides enterprise-grade schema evolution capabilit
 
 > [!SUCCESS]
 > **Module 8 Complete!** You've mastered practical schema evolution using Spark SQL DDL, git workflows, and Azure DevOps automation.
+
+---
+
+| [← Module 7: Azure DevOps](../deployment/azuredevops.md) | [Home](../README.md) |
+|:---------------------------------------------------------|--------------------:|

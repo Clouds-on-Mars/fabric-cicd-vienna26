@@ -1,0 +1,35 @@
+# terraform.tfvars.example
+# Copy this file to terraform.tfvars and update with your values
+
+# Project Configuration
+project_name        = "deworkshop"
+environment         = "dev"
+location            = "westeurope"
+resource_group_name = "rg-fabric-workshop"
+
+# Capacity Configuration
+create_capacity      = true
+capacity_sku         = "F2"
+# existing_capacity_id = ""  # Use if create_capacity = false
+
+# Workspace Admins (Object IDs of users, groups, or service principals)
+workspace_admins = [
+  # "00000000-0000-0000-0000-000000000000",  # User 1
+  # "11111111-1111-1111-1111-111111111111",  # Team Group
+]
+
+# Git Integration (optional)
+enable_git_integration = false
+git_provider           = "AzureDevOps"
+git_organization       = "your-org"
+git_project            = "your-project"    # Azure DevOps only
+git_repository         = "your-repo"
+# git_connection_id    = null              # Required for GitHub, optional for Azure DevOps
+
+# Resource Tags
+tags = {
+  ManagedBy   = "Terraform"
+  Workshop    = "Fabric-DE-CICD"
+  Environment = "Workshop"
+  Owner       = "your-team"
+}

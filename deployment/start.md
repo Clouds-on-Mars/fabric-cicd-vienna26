@@ -510,4 +510,8 @@ Instructor-led discussion:
 - [Microsoft Fabric Deployment Pipelines](https://learn.microsoft.com/fabric/cicd/deployment-pipelines/) - Official documentation
 - [fabric-cli deployment commands](https://github.com/microsoft/fabric-cli) - Pipeline automation via CLI
 - [fabric-cicd deployment APIs](https://github.com/microsoft/fabric-cicd) - Python automation patterns
-- [Workshop deployment patterns](../Code-References/) - Reference implementations
+
+---
+
+| [← Module 4: Branch Management](./branch-out.md) | [Home](../README.md) | [Module 6: End-to-End Pipeline →](./full-run.md) |
+|:-------------------------------------------------|:--------------------:|-------------------------------------------------:|

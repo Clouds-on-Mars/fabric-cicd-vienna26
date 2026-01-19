@@ -396,3 +396,8 @@ The Azure DevOps pipeline infrastructure you've built provides the **secure, aud
 - [Azure DevOps YAML Schema](https://docs.microsoft.com/azure/devops/pipelines/yaml-schema) - Pipeline configuration reference
 - [Azure Service Principal Best Practices](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal) - Authentication patterns
 - [Microsoft Fabric REST APIs](https://learn.microsoft.com/rest/api/fabric/) - API reference for custom integrations
+
+---
+
+| [← Module 6: End-to-End Pipeline](./full-run.md) | [Home](../README.md) | [Module 8: Schema Evolution →](../versioning/data-artifact-changes.md) |
+|:-------------------------------------------------|:--------------------:|-----------------------------------------------------------------------:|

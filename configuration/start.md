@@ -544,3 +544,8 @@ ls -la
 > **Reminder:** Keep your virtual environment activated throughout the workshop. If you close your terminal, reactivate it with:
 > - Windows (WSL): `source fabric-de-workshop/bin/activate`
 > - Mac/Linux: `source fabric-de-workshop/bin/activate`
+
+---
+
+| [← Home](../README.md) | [Module 2: First Deployment →](../deployment/bootstrap.md) |
+|:----------------------|----------------------------------------------------------:|

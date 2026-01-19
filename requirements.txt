@@ -1,0 +1,12 @@
+# Requirements for Fabric CI/CD Workshop
+# Data Community Day Vienna 2026
+
+# Core Fabric Tools
+ms-fabric-cli>=0.1.0
+fabric-cicd>=0.1.0
+
+# Azure Authentication
+azure-identity>=1.15.0
+
+# Optional: Development tools
+# python-dotenv>=1.0.0  # For local .env file support

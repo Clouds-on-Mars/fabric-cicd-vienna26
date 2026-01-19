@@ -297,6 +297,9 @@ In **Module 5: Deployment Pipelines**, you'll learn how to:
 ---
 
 > [!TIP]
-> **💡 Pro Tip:** While Fabric's branch out is convenient for getting started, enterprise deployment requires deployment automation to handle all the connection remapping. That's exactly what we'll build in the next module!
+> **Pro Tip:** While Fabric's branch out is convenient for getting started, enterprise deployment requires deployment automation to handle all the connection remapping. That's exactly what we'll build in the next module!
 
-**Continue to** → [Module 5: Deployment Pipelines](./start.md)
+---
+
+| [← Module 3: Version Control](../versioning/start.md) | [Home](../README.md) | [Module 5: Deployment Pipelines →](./start.md) |
+|:-----------------------------------------------------|:--------------------:|-----------------------------------------------:|
