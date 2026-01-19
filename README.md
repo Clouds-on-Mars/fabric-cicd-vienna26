@@ -1,10 +1,10 @@
-# Data Engineering git/CI/CD with Microsoft Fabric - Workshop Guide
+# Data Engineering Git & CI/CD with Microsoft Fabric
 
-## Welcome Workshop Participants!
+## 🎯 Data Community Day Vienna 2026 — Workshop Guide
 
-This is your main instruction guide for today's hands-on workshop. Follow this document step-by-step to successfully complete all exercises.
+Welcome to the hands-on workshop! This guide will walk you through implementing enterprise-grade DevOps practices for Microsoft Fabric. Follow each module step-by-step to complete all exercises successfully.
 
-### What You'll Build Today
+### What You'll Build
 
 You'll implement a complete data engineering solution with professional DevOps practices:
 - **Medallion Architecture**: Bronze → Silver data layers using Microsoft Fabric Lakehouses
@@ -23,14 +23,14 @@ Before starting, ensure you have:
 1. **Microsoft Fabric Capacity** (Trial or Premium)
 2. **Git Repository Access** (GitHub or Azure DevOps)
 3. **Development Environment**:
-   - Python 3.11+ installed
+   - Python 3.12+ installed
    - Git command line tools
-   - Text editor or IDE (VS Code recommended)
+   - VS Code with Python and Fabric extensions (recommended)
 4. **Permissions**:
    - Fabric workspace admin rights
    - Repository write access
 
-## Learning Objectives
+## 🎓 Learning Objectives
 
 By the end of this workshop, you will:
 
@@ -41,7 +41,7 @@ By the end of this workshop, you will:
 - Deploy CI/CD pipelines that handle code, schema, and data changes  
 - Take home production-ready code samples for your organization  
 
-## Visual Overview
+## 🗺️ Visual Overview
 
 Want to understand the workshop at a glance? Check our **[Visual Workshop Diagrams](./workshop-diagrams.md)**:
 - 🗺️ **Workshop Flow** - Complete journey with checkpoints and timing
@@ -50,7 +50,7 @@ Want to understand the workshop at a glance? Check our **[Visual Workshop Diagra
 - **Business Value** - ROI and transformation benefits
 - ✨ **Before vs After** - Your transformation journey
 
-## Solution Architecture
+## 🏗️ Solution Architecture
 
 You'll build a practical data engineering solution using public datasets, designed to demonstrate real-world complexity:
 
@@ -63,14 +63,14 @@ You'll build a practical data engineering solution using public datasets, design
 - **1 Semantic Model**: Business logic layer
 - **1 Power BI Report**: End-user analytics
 
-## Workshop Modules - Follow in Order
+## 📋 Workshop Modules
 
 > [!IMPORTANT]
 > **START HERE**: Each module builds on the previous one. Complete them in sequence for the best learning experience.
 > 
 > **Exercise Tracking**: Each module contains 4-6 exercises with clear checkpoints. Track your progress within each module!
 
-### Getting Started (9:00 AM - 10:30 AM)
+### 🌅 Getting Started (9:00 AM - 10:30 AM)
 
 | Time | Module | Duration | What You'll Do |
 |------|--------|----------|----------------|
@@ -78,25 +78,25 @@ You'll build a practical data engineering solution using public datasets, design
 | 9:30 AM | **[Module 2: First Deployment](./deployment/bootstrap.md)** | 30 min | • Deploy the baseline solution<br>• Explore medallion architecture<br>• Run initial deployment pipeline<br>• Verify Power BI report<br>**→ CHECKPOINT #1** |
 | 10:00 AM | **[Module 3: Version Control Basics](./versioning/start.md)** | 30 min | • Make changes in Fabric UI<br>• Commit to Git<br>• Pull changes from Git<br>• Resolve conflicts |
 
-**Morning Break: 10:30 AM - 11:00 AM**
+**☕ Morning Break: 10:30 AM - 11:00 AM**
 
-### Advanced Deployment (11:00 AM - 1:00 PM)
+### 🚀 Advanced Deployment (11:00 AM - 1:00 PM)
 
 | Time | Module | Duration | What You'll Do |
 |------|--------|----------|----------------|
 | 11:00 AM | **[Module 4: Branch Management](./deployment/branch-out.md)** | 60 min | • Create feature branches<br>• Deploy to isolated workspaces<br>• Test changes safely<br>• Merge strategies |
 | 12:00 PM | **[Module 5: Deployment Pipelines](./deployment/start.md)** | 60 min | • Configure deployment stages<br>• Set environment variables<br>• Create mapping rules<br>• Automate promotions<br>**→ CHECKPOINT #2** |
 
-**Lunch Break: 1:00 PM - 2:00 PM**
+**🍽️ Lunch Break: 1:00 PM - 2:00 PM**
 
-### CI/CD Automation (2:00 PM - 5:00 PM)
+### ⚙️ CI/CD Automation (2:00 PM - 5:00 PM)
 
 | Time | Module | Duration | What You'll Do |
 |------|--------|----------|----------------|
 | 2:00 PM | **[Module 6: End-to-End Pipeline](./deployment/full-run.md)** | 45 min | • Deploy across dev/test/prod<br>• Validate each environment<br>• Monitor deployment status<br>• Troubleshoot issues |
 | 2:45 PM | **[Module 7: Azure DevOps Integration](./deployment/azuredevops.md)** | 30 min | • Set up Azure Pipelines<br>• Configure service connections<br>• Automate with YAML<br>• Schedule deployments<br>**→ CHECKPOINT #3** |
 
-**Afternoon Break: 3:15 PM - 3:45 PM**
+**☕ Afternoon Break: 3:15 PM - 3:45 PM**
 
 | Time | Module | Duration | What You'll Do |
 |------|--------|----------|----------------|
@@ -106,7 +106,7 @@ You'll build a practical data engineering solution using public datasets, design
 > [!TIP]
 > **Flexible Pacing**: While times are suggested, work at your own pace. If you finish early, explore the advanced scenarios or help others!
 
-## Instructor Checkpoints
+## ✅ Instructor Checkpoints
 
 The workshop includes **3 mandatory instructor checkpoints** to ensure all participants stay synchronized:
 
@@ -119,27 +119,27 @@ The workshop includes **3 mandatory instructor checkpoints** to ensure all parti
 > [!IMPORTANT]
 > **Wait for instructor confirmation** at each checkpoint before proceeding. These synchronization points ensure no one gets left behind on critical technical foundations.
 
-## Key Tools You'll Use
+## 🛠️ Key Tools You'll Use
 
-The fabric-cli and fabric-cicd are key tools to harness capabilities of Microsoft Fabric in a DevOps context. To understand the when to use each tool and learn more, read the article [fabric-cli vs fabric-cicd: Capabilities and Use Cases](fabric-cli-and-cicd.md).
+The `fabric-cli` and `fabric-cicd` are essential tools for implementing DevOps practices with Microsoft Fabric. For a detailed comparison, see [fabric-cli vs fabric-cicd: Capabilities and Use Cases](fabric-cli-and-cicd.md).
 
 ### fabric-cli
-A command-line interface that automates Fabric operations:
+A powerful command-line interface for automating Fabric operations:
 - Deploy workspaces and artifacts
 - Manage environment configurations
 - Integrate with CI/CD pipelines
 - [Documentation](https://github.com/microsoft/fabric-cli)
 
 ### fabric-cicd
-Best practices and patterns for Fabric DevOps:
+Production-ready patterns and templates for Fabric DevOps:
 - Deployment templates and scripts
 - Environment management strategies
 - Testing and validation approaches
 - [Documentation](https://github.com/microsoft/fabric-cicd)
 
-## Quick Reference Guide
+## 📖 Quick Reference
 
-### Troubleshooting Tips
+### Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
@@ -148,14 +148,14 @@ Best practices and patterns for Fabric DevOps:
 | Deployment errors | Verify artifact dependencies and naming conventions |
 | Missing permissions | Request workspace admin or contributor role |
 
-### Need Help?
+### 🆘 Need Help?
 
-- 🙋 **During Workshop**: Ask instructors or check with fellow participants
-- 📖 **Documentation**: Each module has detailed step-by-step instructions
-- 💬 **Slack/Teams Channel**: [If available for your workshop]
+- 🙋 **During Workshop**: Ask instructors or fellow participants
+- 📖 **Documentation**: Each module includes detailed step-by-step instructions
+- 💬 **Community**: Join the conversation in our workshop channel
 - 🐛 **Known Issues**: Check the [troubleshooting guide](./troubleshooting.md)
 
-## Workshop Success Checklist
+## ✔️ Progress Checklist
 
 Use this checklist to track your progress:
 
@@ -168,17 +168,17 @@ Use this checklist to track your progress:
 - [ ] Set up Azure DevOps automation
 - [ ] Handled schema changes successfully
 
-## After the Workshop
+## 🚀 After the Workshop
 
 ### Next Steps
-1. **Apply to Your Projects**: Use these patterns in your organization
-2. **Explore Advanced Scenarios**: Check the additional resources below
-3. **Share Knowledge**: Train your team on Fabric CI/CD practices
+1. **Apply to Your Projects**: Implement these patterns in your organization
+2. **Explore Advanced Scenarios**: Dive into the additional resources below
+3. **Share Knowledge**: Enable your team with Fabric CI/CD best practices
 4. **Contribute**: Submit improvements or new scenarios to this repository
 
-### Future Roadmap
+### 🔮 Roadmap
 
-We're expanding this workshop to cover:
+We're continuously expanding this workshop with:
 - GitHub Actions integration
 - Terraform infrastructure as code
 - Advanced view patterns in Git
@@ -186,7 +186,7 @@ We're expanding this workshop to cover:
 
 ![Diagram of the complete solution roadmap](screenshots/future-solution-roadmap.png)
 
-## Additional Learning Resources
+## 📚 Additional Resources
 
 ### Related Microsoft Fabric Workshops
 
@@ -197,7 +197,7 @@ We're expanding this workshop to cover:
 | **Power BI CI/CD** | Report deployment automation | [Power BI CI/CD Sample](https://github.com/RuiRomano/fabric-cli-powerbi-cicd-sample) |
 | **Data Warehousing** | Understanding medallion architecture | [FabCon DW Workshop](https://aka.ms/FabConDW) |
 
-### Recommended Learning Path
+### 📈 Recommended Learning Path
 
 1. **Foundation** → Complete a Lakehouse or Data Warehousing workshop
 2. **DevOps** → This workshop (Git/CI/CD)
@@ -216,10 +216,16 @@ We welcome contributions! Please:
 
 - **Workshop Issues**: [GitHub Issues](https://github.com/Clouds-on-Mars/fabric-cicd-vienna26/issues)
 - **General Questions**: [Microsoft Fabric Community](https://community.fabric.microsoft.com/)
-- **Documentation**: [Microsoft Fabric Docs](https://docs.microsoft.com/fabric)
+- **Documentation**: [Microsoft Fabric Docs](https://learn.microsoft.com/fabric)
 
 ---
 
 **Ready to start?** → [Begin with Module 1: Environment Setup](./configuration/start.md)
 
-**Good luck with your workshop! 🎉**
+**Enjoy the workshop! 🎉**
+
+---
+
+<p align="center">
+  <sub>Last updated: January 2026 | Data Community Day Vienna 2026</sub>
+</p>
