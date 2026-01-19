@@ -195,7 +195,7 @@ We're expanding this workshop to cover:
 | **Lakehouse Fundamentals** | Learning data integration patterns | [Build Your First Lakehouse](https://github.com/ekote/Build-Your-First-End-to-End-Lakehouse-Solution) |
 | **Production Operations** | Monitoring and optimization | [Fabric Toolbox](https://github.com/microsoft/fabric-toolbox) |
 | **Power BI CI/CD** | Report deployment automation | [Power BI CI/CD Sample](https://github.com/RuiRomano/fabric-cli-powerbi-cicd-sample) |
-| **Data Warehousing** | Understanding medallion architecture | [Las Vegas Workshop 2025](https://aka.ms/FabConDW) |
+| **Data Warehousing** | Understanding medallion architecture | [FabCon DW Workshop](https://aka.ms/FabConDW) |
 
 ### Recommended Learning Path
 
@@ -214,7 +214,7 @@ We welcome contributions! Please:
 
 ## 📧 Contact & Support
 
-- **Workshop Issues**: [GitHub Issues](https://github.com/DaniBunny/Fabric-DE-CICD/issues)
+- **Workshop Issues**: [GitHub Issues](https://github.com/Clouds-on-Mars/fabric-cicd-vienna26/issues)
 - **General Questions**: [Microsoft Fabric Community](https://community.fabric.microsoft.com/)
 - **Documentation**: [Microsoft Fabric Docs](https://docs.microsoft.com/fabric)
 
