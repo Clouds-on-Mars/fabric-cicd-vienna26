@@ -2,7 +2,39 @@
 
 ## 🎯 Data Community Day Vienna 2026 — Workshop Guide
 
-Welcome to the hands-on workshop! This guide will walk you through implementing enterprise-grade DevOps practices for Microsoft Fabric. Follow each module step-by-step to complete all exercises successfully.
+> **📅 January 22, 2026 | 9:00 AM – 5:00 PM CET**  
+> **📍 JUFA Wien City, Mautner Markhof-Gasse 50, 1110 Wien**
+
+Build, version, and deploy Microsoft Fabric solutions at scale. Learn Git, CI/CD, Terraform, and automation for modern data engineering.
+
+---
+
+### About This Workshop
+
+Modern data engineering demands more than just building pipelines—it requires robust version control, seamless collaboration, and reliable deployment across environments. Yet, many teams struggle to manage complex Microsoft Fabric solutions across development and production stages.
+
+This hands-on workshop solves that problem by guiding you through a complete, end-to-end implementation of a data engineering solution using Microsoft Fabric.
+
+You'll learn how to integrate Lakehouse, Spark Notebooks, Warehouses, Data Pipelines, Semantic Models, and Power BI into a cohesive system—all under Git source control and deployed through automated CI/CD pipelines using modern tooling.
+
+### What You'll Master
+
+1. **Infrastructure as Code** — Deploy and manage Fabric workspaces, capacities, and security configurations using Terraform
+2. **Command-line Automation** — Leverage `fabric-cli` for scripted workspace management, artifact deployment, and operational tasks
+3. **Advanced CI/CD Patterns** — Implement sophisticated deployment pipelines using `fabric-cicd` framework for environment promotion and release management
+4. **Git Integration Strategies** — Configure workspace-to-repository mappings, branching strategies, and merge conflict resolution
+5. **Environment Management** — Design and implement variable substitution, deployment gates, and rollback mechanisms across dev/staging/production environments
+
+By the end of this workshop, you'll have hands-on experience with the complete toolchain needed to manage enterprise-grade Fabric solutions—from infrastructure provisioning through production deployment. Whether you're a data engineer, platform architect, or DevOps practitioner, this workshop will equip you with the skills to confidently manage Fabric-based solutions at scale using industry-standard automation tools.
+
+### 👥 Your Trainers
+
+- **[Jan Chlebek](https://www.linkedin.com/in/jan-chlebek/)**
+- **[Michal Kachniarz](https://www.linkedin.com/in/michalkachniarz/)**
+- **[Przemyslaw Harazny](https://www.linkedin.com/in/przemyslaw-harazny/)**
+- **[Estera Kot](https://www.linkedin.com/in/esterakot/)**
+
+---
 
 ### What You'll Build
 
