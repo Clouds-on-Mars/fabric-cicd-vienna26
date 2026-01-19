@@ -1,4 +1,4 @@
-# Data Engineering Git & CI/CD with Microsoft Fabric
+# Git and CI/CD Mastery Inside Fabric Data Engineering
 
 ## 🎯 Data Community Day Vienna 2026 — Workshop Guide
 
