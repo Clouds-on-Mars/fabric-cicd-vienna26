@@ -62,7 +62,7 @@ Bronze Lakehouse → Spark Notebooks → Silver Lakehouse → Semantic Model →
 
 ## Prerequisites
 
-- Microsoft Fabric Capacity (Trial or Premium)
+- Microsoft Fabric Capacity (Trial or Premium) - no need. We will distribute login and password for each participant.
 - Git repository access (GitHub or Azure DevOps)
 - Python 3.12+, Git CLI, VS Code
 - Workspace admin permissions
