@@ -3,7 +3,7 @@
 > [!NOTE]
 > **Difficulty:** Beginner | [← Back to Setup](../configuration/module1-environment-setup.md) | [Next: Version Control →](../versioning/module3-version-control.md)
 
-## 🎯 Module Objectives
+## Module Objectives
 
 In this module, you'll deploy your first complete data engineering solution to Microsoft Fabric:
 
@@ -13,7 +13,7 @@ In this module, you'll deploy your first complete data engineering solution to M
 ✅ Configure a semantic model and Power BI report  
 ✅ Validate the end-to-end data flow
 
-## 📋 Module Exercise Flow
+## Module Exercise Flow
 
 You'll complete 5 deployment exercises:
 
@@ -30,11 +30,11 @@ You'll complete 5 deployment exercises:
 > [!TIP]
 > **What's a Medallion Architecture?**  
 > A data quality pattern where data flows through stages:  
-> 🥉 **Bronze**: Raw, unprocessed data  
-> 🥈 **Silver**: Cleaned, validated data  
-> 🥇 **Gold**: Business-ready analytics data
+> **Bronze**: Raw, unprocessed data  
+> **Silver**: Cleaned, validated data  
+> **Gold**: Business-ready analytics data
 
-## 🏗️ What You'll Build
+## What You'll Build
 
 Your deployment will create a complete analytics solution:
 
@@ -57,7 +57,7 @@ graph LR
 | **MySemanticModel** | Semantic Model | Define business logic |
 | **MyReport** | Report | Visualize insights |
 
-## 📋 Pre-Deployment Checklist
+## Pre-Deployment Checklist
 
 > [!IMPORTANT]
 > Ensure all items are checked before proceeding:
@@ -68,11 +68,11 @@ graph LR
 - ✅ Logged into Fabric portal with workshop credentials
 - ✅ Ready to authenticate fabric-cli (we'll do this next)
 
-## 🚀 Deployment Steps
+## Deployment Steps
 
 ---
 
-## 📝 Exercise 1: Authenticate Fabric CLI (3 minutes)
+## Exercise 1: Authenticate Fabric CLI (3 minutes)
 
 > **Goal:** Connect fabric-cli to your Microsoft Fabric account.
 >
@@ -115,11 +115,11 @@ Should list account, tenant id and other information.
 - [ ] `fab auth status` shows your email
 - [ ] No authentication errors
 
-✨ **Exercise 1 Complete!** Fabric CLI is authenticated.
+**Exercise 1 Complete!** Fabric CLI is authenticated.
 
 ---
 
-## 📝 Exercise 2: Run Bootstrap Deployment (10 minutes)
+## Exercise 2: Run Bootstrap Deployment (10 minutes)
 
 > **Goal:** Deploy the complete data engineering solution to your workspace.
 
@@ -151,7 +151,7 @@ ls
 > [!TIP]
 > **Finding Your Capacity Name (Trial License):**
 > 1. Go to Fabric portal → open My workspace
-> 2. Click **Workspace settings** (⚙️)
+> 2. Click **Workspace settings** ()
 > 3. Select **License info**
 > 4. Copy the **License capacity** name (e.g., `Trial-20250506T124643Z-j2uGFlQLmESKhK9MYO2R8A`)
 
@@ -164,13 +164,13 @@ ls
 
 | Stage | Action | Duration |
 |-------|--------|----------|
-| 1️⃣ | Create workspace `DEWorkshop_<username>` | ~30 sec |
-| 2️⃣ | Assign to Fabric capacity | ~10 sec |
-| 3️⃣ | Create Bronze & Silver Lakehouses | ~1 min |
-| 4️⃣ | Import notebooks and artifacts | ~2 min |
-| 5️⃣ | Configure data connections | ~1 min |
-| 6️⃣ | Load sample data | ~2 min |
-| 7️⃣ | Open workspace in browser | Instant |
+|  | Create workspace `DEWorkshop_<username>` | ~30 sec |
+|  | Assign to Fabric capacity | ~10 sec |
+|  | Create Bronze & Silver Lakehouses | ~1 min |
+|  | Import notebooks and artifacts | ~2 min |
+|  | Configure data connections | ~1 min |
+|  | Load sample data | ~2 min |
+|  | Open workspace in browser | Instant |
 
 ### Step 4: Watch for Success Messages
 
@@ -299,11 +299,11 @@ _ cleaning up staging directory...
 - [ ] Browser opened to your workspace
 - [ ] All progress indicators showed ✓
 
-🚀 **Exercise 2 Complete!** Solution is deployed to Fabric.
+**Exercise 2 Complete!** Solution is deployed to Fabric.
 
 ---
 
-## 📝 Exercise 3: Verify Workspace Contents (5 minutes)
+## Exercise 3: Verify Workspace Contents (5 minutes)
 
 > **Goal:** Confirm all artifacts were created successfully in your workspace.
 
@@ -313,16 +313,16 @@ _ cleaning up staging directory...
 
 | Item | Type | Status Check |
 |------|------|-------------|
-| Lakehouse_Bronze | 🏠 Lakehouse | Should contain 4 tables |
-| Lakehouse_Silver | 🏠 Lakehouse | Should contain 3 tables |
-| MyLHCopyJob | 📥 Copy Activity | Status: Completed |
-| MyLHCopyJob2 | 📥 Copy Activity | Status: Completed |
-| Bronze_Data_Preparation | 📓 Notebook | Ready to run |
-| Transformations | 📓 Notebook | Ready to run |
-| Validations | 📓 Notebook | Ready to run |
+| Lakehouse_Bronze | Lakehouse | Should contain 4 tables |
+| Lakehouse_Silver | Lakehouse | Should contain 3 tables |
+| MyLHCopyJob | Copy Activity | Status: Completed |
+| MyLHCopyJob2 | Copy Activity | Status: Completed |
+| Bronze_Data_Preparation | Notebook | Ready to run |
+| Transformations | Notebook | Ready to run |
+| Validations | Notebook | Ready to run |
 | MyEnv | Environment |  |
-| MySemanticModel | 📊 Semantic Model | Connected to Silver (refresh it!) |
-| MyReport | 📈 Report | Should open without errors (refresh it!) |
+| MySemanticModel | Semantic Model | Connected to Silver (refresh it!) |
+| MyReport | Report | Should open without errors (refresh it!) |
 
 ### ✅ Exercise 3 Checkpoint
 
@@ -332,11 +332,11 @@ _ cleaning up staging directory...
 - [ ] No error indicators on any items
 - [ ] Workspace name matches `DEWorkshop_<username>`
 
-📁 **Exercise 3 Complete!** All artifacts are present.
+**Exercise 3 Complete!** All artifacts are present.
 
 ---
 
-## 📝 Exercise 4: Validate Data in Lakehouses (5 minutes)
+## Exercise 4: Validate Data in Lakehouses (5 minutes)
 
 > **Goal:** Verify that data was successfully loaded into your Lakehouses.
 
@@ -361,11 +361,11 @@ _ cleaning up staging directory...
 - [ ] All tables contain rows (not empty)
 - [ ] Can preview data without errors
 
-📦 **Exercise 4 Complete!** Data is loaded correctly.
+**Exercise 4 Complete!** Data is loaded correctly.
 
 ---
 
-## 📝 Exercise 5: Test Complete Solution (7 minutes)
+## Exercise 5: Test Complete Solution (7 minutes)
 
 > **Goal:** Validate the end-to-end solution including transformations and reporting.
 
@@ -384,14 +384,14 @@ _ cleaning up staging directory...
 
 ### Step 5.2: Test Semantic Model and Report
 
-#### 📊 Verify Semantic Model:
+#### Verify Semantic Model:
 1. Open **MySemanticModel**
 2. Check data source connection:
    - Should point to `Lakehouse_Silver`
    - Table `dbo.t1` should be imported
 3. Click **Refresh now** to update data
 
-#### 📈 Open the Report:
+#### Open the Report:
 1. Click on **MyReport**
 2. Report should display:
    - Dashboard with charts
@@ -400,7 +400,7 @@ _ cleaning up staging directory...
 3. Try interacting with filters to ensure responsiveness
 
 > [!SUCCESS]
-> **Congratulations!** You've deployed your first Fabric solution! 🎉
+> **Congratulations!** You've deployed your first Fabric solution! 
 
 ### ✅ Exercise 5 Checkpoint
 
@@ -411,9 +411,9 @@ _ cleaning up staging directory...
 - [ ] Report displays charts and data
 - [ ] Filters work interactively
 
-🎆 **Exercise 5 Complete!** Your solution is fully operational!
+**Exercise 5 Complete!** Your solution is fully operational!
 
-## 🔧 Troubleshooting Guide
+## Troubleshooting Guide
 
 ### Common Issues & Quick Fixes
 
@@ -447,13 +447,13 @@ fab create --help
 
 ### Need More Help?
 
-- 🙋 Ask your instructor
-- 💬 Check with fellow participants
-- 📖 Review [fabric-cli docs](https://github.com/microsoft/fabric-cli)
+- Ask your instructor
+- Check with fellow participants
+- Review [fabric-cli docs](https://github.com/microsoft/fabric-cli)
 
 ---
 
-## 🔄 Resync if You're Behind (Module 2)
+## Resync if You're Behind (Module 2)
 
 If the deployment failed or your workspace doesn't look right:
 
@@ -483,7 +483,7 @@ Still not working? Use the **Troubleshooting Guide** above and [`troubleshooting
 
 ---
 
-## 🧠 What You Learned in Module 2
+## What You Learned in Module 2
 
 By completing this module, you:
 
@@ -495,9 +495,9 @@ By completing this module, you:
 
 ---
 
-## 🎯 Module Summary
+## Module Summary
 
-### 📊 Exercise Summary
+### Exercise Summary
 
 | Exercise | Completed | What You Achieved |
 |----------|-----------|------------------|
@@ -508,23 +508,23 @@ By completing this module, you:
 | **5. Test Solution** | ✅ | Validated end-to-end flow |
 
 ### ✅ Skills You've Gained:
-- 🚀 Deployed a complete medallion architecture
-- 📦 Created and populated Lakehouses
-- 📓 Set up data transformations
-- 📊 Configured a semantic model
-- 📈 Validated the end-to-end solution
+- Deployed a complete medallion architecture
+- Created and populated Lakehouses
+- Set up data transformations
+- Configured a semantic model
+- Validated the end-to-end solution
 
-## 📚 What's Next?
+## What's Next?
 
 > [!IMPORTANT]
 > ### ✅ Module 2 Complete! Ready to Continue?
 > 
 > **Your Progress:** [1] ✅ → [2] ✅ → **[3]** → [4] → [5] → [6] → [7] → [8]
 > 
-> ### 🔄 **NEXT MODULE: Version Control Basics**
+> ### **NEXT MODULE: Version Control Basics**
 > 
-> **📁 Location:** [`/versioning/module3-version-control.md`](../versioning/module3-version-control.md)  
-> **🎯 You'll Learn:**
+> **Location:** [`/versioning/module3-version-control.md`](../versioning/module3-version-control.md)  
+> **You'll Learn:**
 > - Connect workspace to Git repository
 > - Push changes from Fabric to Git
 > - Pull changes from Git to Fabric
@@ -537,7 +537,7 @@ By completing this module, you:
 
 ---
 
-## 🎓 INSTRUCTOR CHECKPOINT #1
+## INSTRUCTOR CHECKPOINT #1
 
 > [!IMPORTANT]
 > **Mandatory Instructor Review** - All participants should pause here for group synchronization.
@@ -551,7 +551,7 @@ By completing this module, you:
 - [ ] Power BI report displays data correctly
 - [ ] Git integration is connected and showing all items
 
-#### 📊 **Group Status Check**
+#### **Group Status Check**
 ```
 Instructor will verify:
 1. Number of participants ready: ___/___
@@ -562,12 +562,12 @@ Instructor will verify:
 3. Time elapsed vs. planned: ___ minutes
 ```
 
-#### 🚨 **Common Issues at This Stage**
+#### **Common Issues at This Stage**
 - **Missing tables**: Run `Transformations.Notebook` again
 - **Report not loading**: Check semantic model refresh
 - **Git not syncing**: Verify branch connection in workspace settings
 
-#### 💬 **Group Discussion (5 minutes)**
+#### **Group Discussion (5 minutes)**
 - What was the most challenging part so far?
 - Any questions about the medallion architecture?
 - Understanding of Bronze vs. Silver layers?

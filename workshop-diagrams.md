@@ -28,9 +28,9 @@ graph TB
     M8[<b>Module 8: Schema Evolution</b><br/>━━━━━━━━━━━━━━━<br/>• Data Migration<br/>• Safe Schema Changes<br/>• Rollback Strategies<br/><i>45 minutes</i>]:::advancedClass
     
     %% Checkpoints
-    CP1{<b>🎯 CHECKPOINT #1</b><br/>Foundation Ready<br/>Instructor Review}:::checkpointClass
-    CP2{<b>🎯 CHECKPOINT #2</b><br/>Pipeline Working<br/>Instructor Review}:::checkpointClass
-    CP3{<b>🎯 CHECKPOINT #3</b><br/>Automation Ready<br/>Instructor Review}:::checkpointClass
+    CP1{<b> CHECKPOINT #1</b><br/>Foundation Ready<br/>Instructor Review}:::checkpointClass
+    CP2{<b> CHECKPOINT #2</b><br/>Pipeline Working<br/>Instructor Review}:::checkpointClass
+    CP3{<b> CHECKPOINT #3</b><br/>Automation Ready<br/>Instructor Review}:::checkpointClass
     
     %% Breaks
     Break1[<b>Morning Break</b><br/>10:30 - 11:00]:::breakClass
@@ -339,13 +339,13 @@ flowchart TD
 Add this section near the top of your README:
 
 ```markdown
-## 📊 Visual Overview
+##  Visual Overview
 
 Want to understand the workshop at a glance? Check our [visual diagrams](./workshop-diagrams.md):
 - 🗺️ Complete workshop flow with checkpoints
-- 🎯 Purpose and transformation journey  
-- 📈 Skills progression path
-- 💡 Business value proposition
+-  Purpose and transformation journey  
+-  Skills progression path
+-  Business value proposition
 ```
 
 ### For Presentations

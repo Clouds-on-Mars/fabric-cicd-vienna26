@@ -3,7 +3,7 @@
 > [!NOTE]
 > **Difficulty:** Intermediate | [← Back to Deployment](../deployment/module2-first-deployment.md) | [Next: Branch Management →](../deployment/module4-branch-management.md)
 
-## 🎯 Module Objectives
+## Module Objectives
 
 Learn the fundamental Git workflows that enable team collaboration:
 
@@ -23,7 +23,7 @@ To achieve isolation, workspaces should be connected to feature branches or sepa
 
 Refer to the [Best practices for CI/CD in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/cicd/best-practices-cicd) for more information.
 
-## 📋 Module Exercise Flow
+## Module Exercise Flow
 
 You'll complete 5 hands-on exercises:
 
@@ -37,7 +37,7 @@ You'll complete 5 hands-on exercises:
 
 > **Track Your Progress:** Check off each exercise as you complete it!
 
-## 🔄 The Two-Way Sync Pattern
+## The Two-Way Sync Pattern
 
 ```mermaid
 graph LR
@@ -54,7 +54,7 @@ graph LR
 | **Fabric → Git** | Save your work | Edit notebook in Fabric, commit to Git |
 | **Git → Fabric** | Apply team changes | Pull colleague's updates into your workspace |
 
-## 📋 Pre-Module Checklist
+## Pre-Module Checklist
 
 > [!IMPORTANT]
 > Ensure all items are checked before proceeding:
@@ -70,7 +70,7 @@ graph LR
 
 ---
 
-## 📝 Exercise 1: Setup Azure DevOps Project (5 minutes)
+## Exercise 1: Setup Azure DevOps Project (5 minutes)
 
 > **Goal:** Create your personal Azure DevOps project and initialize Git repository for the workshop.
 
@@ -128,11 +128,11 @@ For example, the following would be a `User209` repository fork ready to go:
 - [ ] You can access Repos section
 - [ ] Main branch is active and visible
 
-✨ **Exercise 1 Complete!** Your Azure DevOps project is ready for Git integration.
+**Exercise 1 Complete!** Your Azure DevOps project is ready for Git integration.
 
 ---
 
-## 📝 Exercise 2: Connect to Git (5 minutes)
+## Exercise 2: Connect to Git (5 minutes)
 
 > **Goal:** Link your Fabric workspace to your newly created Git repository.
 
@@ -140,7 +140,7 @@ For example, the following would be a `User209` repository fork ready to go:
 
 1. **In your Fabric workspace:**
    - Ensure you're in `DEWorkshop_<username>`
-   - Click the **⚙️ Workspace Settings** icon (top right)
+   - Click the ** Workspace Settings** icon (top right)
 
 2. **Navigate to the Git integration tab:**
    - Click **Azure DevOps** 
@@ -197,7 +197,7 @@ This will make life easier later in Module 7. We will upload the `parameter.yml`
 - [ ] Azure DevOps shows your workspace artifacts
 - [ ] All artifacts appear in the repository
 
-✨ **Exercise 2 Complete!** You've connected Fabric to Git.
+**Exercise 2 Complete!** You've connected Fabric to Git.
 
 ### Step 2.4: Verify Sync Success
 
@@ -215,7 +215,7 @@ This will make life easier later in Module 7. We will upload the `parameter.yml`
 
 ---
 
-## 📝 Exercise 3: Fabric → Git Workflow (10 minutes)
+## Exercise 3: Fabric → Git Workflow (10 minutes)
 
 > **Goal:** Make a change in Fabric and push it to your Git repository.
 > 
@@ -246,7 +246,7 @@ This will make life easier later in Module 7. We will upload the `parameter.yml`
    - Click **Source control** button in workspace header
    - You'll see pending changes:
    ```
-   📝 Changes (1)
+   Changes (1)
    M  Lakehouse_Silver
    ```
 
@@ -288,11 +288,11 @@ This will make life easier later in Module 7. We will upload the `parameter.yml`
 - [ ] Commit visible in Azure DevOps history
 - [ ] `shortcuts.metadata.json` shows the new name
 
-🎯 **Exercise 3 Complete!** You've pushed changes from Fabric to Git.
+**Exercise 3 Complete!** You've pushed changes from Fabric to Git.
 
 ---
 
-## 📝 Exercise 4: Git → Fabric Workflow (10 minutes)
+## Exercise 4: Git → Fabric Workflow (10 minutes)
 
 > **Goal:** Edit files directly in Git and sync changes back to Fabric.
 >
@@ -338,7 +338,7 @@ This will make life easier later in Module 7. We will upload the `parameter.yml`
    - Return to Fabric workspace
    - Notice the banner:
    ```
-   ⚠️ Updates available from Git
+    Updates available from Git
    ```
    - Or click **Source control** to see:
    ```
@@ -363,7 +363,7 @@ This will make life easier later in Module 7. We will upload the `parameter.yml`
    - Preview data to ensure it works
 
 > [!SUCCESS]
-> You've completed a full round-trip: Fabric → Git → Fabric! 🔄
+> You've completed a full round-trip: Fabric → Git → Fabric! 
 
 ### ✅ Exercise 4 Checkpoint
 
@@ -374,15 +374,15 @@ This will make life easier later in Module 7. We will upload the `parameter.yml`
 - [ ] Shortcut renamed back to `t3` in Lakehouse_Silver
 - [ ] Data preview works correctly
 
-🔄 **Exercise 4 Complete!** You've pulled changes from Git to Fabric.
+**Exercise 4 Complete!** You've pulled changes from Git to Fabric.
 
 ---
 
-## 📝 Exercise 5: Understanding What Gets Versioned (5 minutes)
+## Exercise 5: Understanding What Gets Versioned (5 minutes)
 
 > **Goal:** Learn what Fabric tracks in Git and what it doesn't.
 
-### 📦 What's Included in Git
+### What's Included in Git
 
 | Item Type | What's Versioned | What's NOT Versioned |
 |-----------|------------------|---------------------|
@@ -393,7 +393,7 @@ This will make life easier later in Module 7. We will upload the `parameter.yml`
 | **Reports** | • Layout & visuals<br>• DAX queries<br>• Bookmarks | • Cached data<br>• User personalizations |
 | **Connections** | • Connection metadata<br>• Endpoint URLs | • Passwords & secrets<br>• OAuth tokens |
 
-### 🎯 Key Implications
+### Key Implications
 
 > [!IMPORTANT]
 > **The Power of Git Integration:**
@@ -414,7 +414,7 @@ graph TD
     F --> G[Deploy to Prod]
 ```
 
-📚 **Learn more:** [Best practices for CI/CD in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/cicd/best-practices-cicd)
+**Learn more:** [Best practices for CI/CD in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/cicd/best-practices-cicd)
 
 ### ✅ Exercise 4 Checkpoint
 
@@ -424,9 +424,9 @@ graph TD
 - [ ] Grasp deployment implications
 - [ ] Ready to use Git for collaboration
 
-📚 **Exercise 5 Complete!** You understand Fabric's Git integration model.
+**Exercise 5 Complete!** You understand Fabric's Git integration model.
 
-## 🔧 Troubleshooting Guide
+## Troubleshooting Guide
 
 ### Common Issues & Solutions
 
@@ -453,7 +453,7 @@ Workspace settings → Git integration → Disconnect
 
 ---
 
-## 🔄 Resync if You're Behind (Module 3)
+## Resync if You're Behind (Module 3)
 
 If your Git repo is in a strange state or you're getting merge errors:
 
@@ -488,7 +488,7 @@ If you're unsure whether it's safe to reset, pause and ask an instructor before 
 
 ---
 
-## 🧠 What You Learned in Module 3
+## What You Learned in Module 3
 
 By completing this module, you:
 
@@ -500,9 +500,9 @@ By completing this module, you:
 
 ---
 
-## 🎉 Module Complete!
+##  Module Complete!
 
-### 📊 Exercise Summary
+### Exercise Summary
 
 | Exercise | Completed | What You Learned |
 |----------|-----------|------------------|
@@ -514,11 +514,11 @@ By completing this module, you:
 
 ### ✅ Skills You've Mastered:
 
-- 🔗 **Connected** Fabric workspace to Git repository
+- **Connected** Fabric workspace to Git repository
 - ⬆️ **Pushed** changes from Fabric to Git
 - ⬇️ **Pulled** changes from Git to Fabric
-- 📝 **Understood** what gets versioned vs. what doesn't
-- 🔄 **Practiced** the complete development loop
+- **Understood** what gets versioned vs. what doesn't
+- **Practiced** the complete development loop
 
 ### 🏆 You Can Now:
 - Collaborate with team members through Git
@@ -526,17 +526,17 @@ By completing this module, you:
 - Review code before deploying to production
 - Maintain multiple environments from one codebase
 
-## 📚 What's Next?
+## What's Next?
 
 > [!IMPORTANT]
 > ### ✅ Module 3 Complete! Ready to Continue?
 > 
 > **Your Progress:** [1] ✅ → [2] ✅ → [3] ✅ → **[4]** → [5] → [6] → [7] → [8]
 > 
-> ### 🚀 **NEXT MODULE: Branch Management**
+> ### **NEXT MODULE: Branch Management**
 > 
-> **📁 Location:** [`/deployment/module4-branch-management.md`](../deployment/module4-branch-management.md)  
-> **🎯 You'll Learn:**
+> **Location:** [`/deployment/module4-branch-management.md`](../deployment/module4-branch-management.md)  
+> **You'll Learn:**
 > - Create feature branches for isolated development
 > - Deploy branches to separate workspaces
 > - Test changes without affecting main

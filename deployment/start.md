@@ -57,7 +57,7 @@ This lab focuses on **fixing everything broken from Module 4** using **Microsoft
 
 1. **Add workspace to Development stage**
    - When asked, assign to the **Development** stage
-   - **⚠️ Key Concept**: Development represents our original bootstrap workspace from Lab 1
+   - ** Key Concept**: Development represents our original bootstrap workspace from Lab 1
 
 ![Dev DP Assign](../screenshots/deployment-start-create-dp-stage-dev-assign.png)
 
@@ -98,11 +98,11 @@ The stages configuration must look like this:
 
 1. **Navigate to Production workspace**
    - Open `DEWorkshop_<username>_Prod`
-   - ⚠️ The portal now shows that the notebooks have changes! What happened?!
+   -  The portal now shows that the notebooks have changes! What happened?!
 
 ![Unexpected Changes](../screenshots/deployment-start-undexpected-changes.png)
 
-🚨 This is actually how the branch-out should have worked in Module 4! This is a bug and is being fixed.
+ This is actually how the branch-out should have worked in Module 4! This is a bug and is being fixed.
 
 ✅ **Deployment Pipelines does the right thing for Notebooks! It remaps them automatically between stages.**
 
@@ -204,7 +204,7 @@ The main difference is that for t3, you also need to select the variable `lakeho
 Your variable library and shortcut definitions are ready to go.
 
 > [!TIP]
-> **💡 Pro Tip:** Variable definitions are expressed in git as metadata. This means that you could update all your shortcuts metadata to use variables directly in Azure DevOps and then imported back to the workspace. This is a key productivity pattern when dealing with many shortcuts.
+> ** Pro Tip:** Variable definitions are expressed in git as metadata. This means that you could update all your shortcuts metadata to use variables directly in Azure DevOps and then imported back to the workspace. This is a key productivity pattern when dealing with many shortcuts.
 
 ## Part 5: Deployment Rules
 
@@ -262,7 +262,7 @@ This will make sure all metadata is synced to the main branch.
 > [!TIP]
 > Feel free to take a look in Azure DevOps (main branch) to see what a variable library item and shortcuts metadata (under Lakehouse_Silver.Lakehouse) with variables look like.
 
-## 📝 Exercise 6: Run Deployment
+##  Exercise 6: Run Deployment
 
 > **Goal:** Validate that rules and variables work correctly during deployment.
 
@@ -377,7 +377,7 @@ This will guarantee that Shortcut definitions of t2 and t3 are refreshed to use 
 - [ ] Semantic Model refreshed from Production data
 - [ ] Report shows Production data
 
-🎉 **Step 6 Complete!** Production workspace is now fully functional and isolated!
+ **Step 6 Complete!** Production workspace is now fully functional and isolated!
 
 ---
 
@@ -454,7 +454,7 @@ After completing this lab:
 
 ---
 
-## 🔄 Resync if You're Behind (Module 5)
+##  Resync if You're Behind (Module 5)
 
 If your deployment pipeline or variable library isn't working:
 
@@ -484,7 +484,7 @@ Ask an instructor if you need help debugging variable or rule configurations.
 
 ---
 
-## 🧠 What You Learned in Module 5
+##  What You Learned in Module 5
 
 By completing this module, you:
 
@@ -496,7 +496,7 @@ By completing this module, you:
 
 ---
 
-## 🎓 INSTRUCTOR CHECKPOINT #2
+##  INSTRUCTOR CHECKPOINT #2
 
 > [!IMPORTANT]
 > **Critical Deployment Pipeline Review** - This is a complex module. Ensure all participants have working pipelines before continuing.
@@ -512,7 +512,7 @@ By completing this module, you:
   - [ ] LAKEHOUSE_BRONZE_TABLE_NAME for both stages
 - [ ] At least one successful deployment executed
 
-#### 📊 **Group Progress Assessment**
+####  **Group Progress Assessment**
 - Participants ready: ___/___
 - Average time taken: ___ minutes (target: 60)
 - Most common configuration errors:
@@ -520,13 +520,13 @@ By completing this module, you:
   - [ ] Workspace permission problems
   - [ ] Item name mismatches
 
-#### 🚨 **Critical Issues to Resolve**
+####  **Critical Issues to Resolve**
 1. **Variables not resolving**: Check variable names and IDs
 2. **Rules not applying**: Verify target items exist
 3. **Deployment failing**: Check workspace permissions
 4. **Shortcuts broken**: Confirm lakehouse IDs are correct
 
-#### 💡 **Knowledge Check (10 minutes)**
+####  **Knowledge Check (10 minutes)**
 Instructor-led discussion:
 - Why do we need deployment rules?
 - What's the difference between Dev and Prod data?

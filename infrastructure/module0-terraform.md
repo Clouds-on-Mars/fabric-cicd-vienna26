@@ -685,7 +685,7 @@ You've learned how to:
 
 ---
 
-## 🔄 Resync if You're Behind (Module 0)
+## Resync if You're Behind (Module 0)
 
 If your Terraform setup isn't working:
 
@@ -716,7 +716,7 @@ Still not working? This module is **optional** — you can skip to [Module 1](..
 
 ---
 
-## 🧠 What You Learned in Module 0
+## What You Learned in Module 0
 
 By completing this module, you:
 

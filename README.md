@@ -8,7 +8,7 @@ Build, version, and deploy Microsoft Fabric solutions at scale.
 
 ## Quick Start
 
-### 🔐 Step 0: Claim Your Workshop Credentials
+### Step 0: Claim Your Workshop Credentials
 
 Before you begin, claim your Fabric login credentials:
 
@@ -17,7 +17,7 @@ Before you begin, claim your Fabric login credentials:
 3. **Put your name** in the "Claimed By" column to reserve those credentials
 4. Use the **Login** and **Password** from that row to sign into Microsoft Fabric
 
-> ⚠️ **Important**: Each participant should claim only ONE set of credentials.
+>  **Important**: Each participant should claim only ONE set of credentials.
 
 ### Workshop Modules
 
@@ -34,7 +34,7 @@ Before you begin, claim your Fabric login credentials:
 
 1. **Check the module page you're on**
    - Scroll to the bottom of the current module (e.g. Module 1, 2, 3…)
-   - Look for the **🔄 Resync** or **🔧 Troubleshooting** section for that module.
+   - Look for the **Resync** or **Troubleshooting** section for that module.
 
 2. **Use the central troubleshooting guide**
    - Open [`troubleshooting.md`](./troubleshooting.md)
@@ -44,7 +44,7 @@ Before you begin, claim your Fabric login credentials:
    - If you're still blocked after 5 minutes, raise your hand or ask the trainers.
    - It's better to ask early than to fall behind.
 
-> 💡 You don't need to read everything. Use these steps as your "panic button" when something doesn't work.
+> You don't need to read everything. Use these steps as your "panic button" when something doesn't work.
 
 ---
 

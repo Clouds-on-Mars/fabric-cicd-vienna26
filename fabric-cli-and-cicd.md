@@ -177,15 +177,15 @@ This combination reflects how teams actually work:
 | Feature | fabric-cli | fabric-cicd |
 |---------|------------|-------------|
 | **Interactive Use** | ✅ Primary | ❌ Not designed for |
-| **Individual Items** | ✅ Excellent | ⚠️ Limited |
-| **Bulk Operations** | ⚠️ Manual scripting | ✅ Native support |
+| **Individual Items** | ✅ Excellent |  Limited |
+| **Bulk Operations** |  Manual scripting | ✅ Native support |
 | **Environment Management** | ❌ Manual | ✅ Built-in |
-| **Parameterization** | ⚠️ Basic | ✅ Advanced |
-| **CI/CD Integration** | ⚠️ Script-based | ✅ Native library |
-| **Error Handling** | ⚠️ Command-line | ✅ Structured |
+| **Parameterization** |  Basic | ✅ Advanced |
+| **CI/CD Integration** |  Script-based | ✅ Native library |
+| **Error Handling** |  Command-line | ✅ Structured |
 | **Deployment Rules** | ❌ Manual | ✅ Automated |
 | **State Tracking** | ❌ None | ✅ Built-in |
-| **Learning Curve** | ✅ Easy | ⚠️ Moderate |
+| **Learning Curve** | ✅ Easy |  Moderate |
 
 ## Conclusion
 

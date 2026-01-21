@@ -68,10 +68,10 @@ Schema changes in data engineering require different risk management strategies:
 
 **Characteristics**:
 
-- ⚠️ **Breaking changes** - existing queries may fail
-- ⚠️ **Data loss risk** - incorrect implementation can destroy data
-- ⚠️ **Dependency cascade** - affects downstream systems
-- ⚠️ **Complex rollback** - may require data restoration
+-  **Breaking changes** - existing queries may fail
+-  **Data loss risk** - incorrect implementation can destroy data
+-  **Dependency cascade** - affects downstream systems
+-  **Complex rollback** - may require data restoration
 
 **Examples**:
 
@@ -278,7 +278,7 @@ Schema changes in data engineering require different risk management strategies:
    - Source branch: `main`
    - Target branch: `test`
    - Title: "Deploy destructive schema change to test - remove t5.created_timestamp"
-   - Description: "⚠️ DESTRUCTIVE CHANGE: Removes created_timestamp column from table t5. Validate all downstream queries."
+   - Description: " DESTRUCTIVE CHANGE: Removes created_timestamp column from table t5. Validate all downstream queries."
    - Click **Create**
 
 2. **Approve and merge Pull Request**
@@ -300,7 +300,7 @@ Schema changes in data engineering require different risk management strategies:
    - Click **New pull request**
    - Source branch: `test`
    - Target branch: `production`
-   - Title: "⚠️ PRODUCTION DESTRUCTIVE CHANGE - remove t5.created_timestamp"
+   - Title: " PRODUCTION DESTRUCTIVE CHANGE - remove t5.created_timestamp"
    - Description: "Validated destructive schema change. Column removal tested in Development and Test environments. All dependent systems verified."
    - Click **Create**
 
@@ -402,7 +402,7 @@ The foundation you've built provides enterprise-grade schema evolution capabilit
 
 ---
 
-## 🔄 Resync if You're Behind (Module 8)
+## Resync if You're Behind (Module 8)
 
 If your schema changes aren't working or you're stuck:
 
@@ -431,7 +431,7 @@ Still not working? Use [`troubleshooting.md`](../troubleshooting.md) and ask an 
 
 ---
 
-## 🧠 What You Learned in Module 8
+## What You Learned in Module 8
 
 By completing this module, you:
 

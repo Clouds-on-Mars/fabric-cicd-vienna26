@@ -3,7 +3,7 @@
 > [!NOTE]
 > **Duration:** 30 minutes | **Difficulty:** Beginner | [← Back to Workshop Home](../README.md) | [Next: First Deployment →](../deployment/bootstrap.md)
 
-## 🎯 Module Objectives
+##  Module Objectives
 
 By the end of this module, you will have:
 - ✅ Installed all required tools (Git, Python, VSCode)
@@ -12,7 +12,7 @@ By the end of this module, you will have:
 - ✅ Cloned the workshop repository
 - ✅ Verified everything works correctly
 
-## 📋 Module Exercise Flow
+##  Module Exercise Flow
 
 You'll complete 6 setup exercises:
 
@@ -27,20 +27,20 @@ You'll complete 6 setup exercises:
 
 > **Track Your Progress:** Check off each exercise as you complete it!
 
-## 📋 Quick Pre-flight Check
+##  Quick Pre-flight Check
 
 Before starting, ensure you have:
-- 🌐 Internet access to GitHub and Microsoft Fabric
-- 💻 Admin rights to install software on your machine
-- 📧 Workshop credentials (provided by instructor)
-- ⏱️ 30 minutes of uninterrupted time
+-  Internet access to GitHub and Microsoft Fabric
+-  Admin rights to install software on your machine
+-  Workshop credentials (provided by instructor)
+-  30 minutes of uninterrupted time
 
 > [!TIP]
 > **Pro Tip:** Use an incognito/private browser window to avoid conflicts with existing work accounts. This prevents automatic redirects and makes login smoother.
 
 ---
 
-## 📝 Exercise 1: Install Git (5 minutes)
+##  Exercise 1: Install Git (5 minutes)
 
 > **Goal:** Install Git version control system on your machine.
 >
@@ -91,11 +91,11 @@ git --version
 - [ ] Git works from command line/terminal
 - [ ] You understand basic Git concepts
 
-✨ **Exercise 1 Complete!** Git is ready for version control.
+ **Exercise 1 Complete!** Git is ready for version control.
 
 ---
 
-## 📝 Exercise 2: Install Python & Workshop Tools (10 minutes)
+##  Exercise 2: Install Python & Workshop Tools (10 minutes)
 
 > **Goal:** Set up Python environment with fabric-cli and fabric-cicd packages.
 >
@@ -135,7 +135,7 @@ python3 --version
 pip3 --version
 ```
 
-### 🔧 Set Up Your Workshop Environment
+###  Set Up Your Workshop Environment
 
 > [!IMPORTANT]
 > A virtual environment keeps workshop packages isolated from your system Python.
@@ -200,11 +200,11 @@ pip3 --version
 - [ ] fabric-cicd imported successfully in Python
 - [ ] Terminal shows `(fabric-de-workshop)` prefix
 
-🎉 **Exercise 2 Complete!** Python environment is configured.
+ **Exercise 2 Complete!** Python environment is configured.
 
 ---
 
-## 📝 Exercise 3: Install Visual Studio Code (5 minutes)
+##  Exercise 3: Install Visual Studio Code (5 minutes)
 
 > **Goal:** Install and configure VSCode as your development environment.
 >
@@ -237,11 +237,11 @@ VSCode will be our primary development environment for the workshop.
 - [ ] Python interpreter is configured
 - [ ] You can open integrated terminal (Ctrl+`)
 
-💻 **Exercise 3 Complete!** VSCode is ready for development.
+ **Exercise 3 Complete!** VSCode is ready for development.
 
 ---
 
-## 📝 Exercise 4: Access Microsoft Fabric Portal (5 minutes)
+##  Exercise 4: Access Microsoft Fabric Portal (5 minutes)
 
 > **Goal:** Log into Microsoft Fabric with workshop credentials.
 >
@@ -293,11 +293,11 @@ You have successfully logged in to Microsoft Fabric!
 - [ ] New password saved (if changed)
 - [ ] No MFA blocks for workshop
 
-🌐 **Exercise 4 Complete!** You have access to Microsoft Fabric.
+ **Exercise 4 Complete!** You have access to Microsoft Fabric.
 
 ---
 
-## 📝 Exercise 5: Get the Workshop Code (5 minutes)
+##  Exercise 5: Get the Workshop Code (5 minutes)
 
 > **Goal:** Clone the workshop repository to your local machine.
 >
@@ -316,11 +316,11 @@ You have successfully logged in to Microsoft Fabric!
 
 ![GitHub Login](../screenshots/setup/github-login.png)
 
-### 📦 Clone the Workshop Repository
+###  Clone the Workshop Repository
 
 1. **Open the workshop repository:**
    
-   🔗 [https://github.com/Clouds-on-Mars/fabric-cicd-vienna26](https://github.com/Clouds-on-Mars/fabric-cicd-vienna26)
+    [https://github.com/Clouds-on-Mars/fabric-cicd-vienna26](https://github.com/Clouds-on-Mars/fabric-cicd-vienna26)
 
 2. **Copy it to your machine:**
    
@@ -367,11 +367,11 @@ Fabric-DE-CICD/
 - [ ] Can navigate to repository in terminal
 - [ ] GitHub account is accessible
 
-📦 **Exercise 5 Complete!** Workshop code is ready.
+ **Exercise 5 Complete!** Workshop code is ready.
 
 ---
 
-## 📝 Exercise 6: Set Up Your Workspace in VSCode (2 minutes)
+##  Exercise 6: Set Up Your Workspace in VSCode (2 minutes)
 
 > **Goal:** Open the workshop repository in VSCode and verify setup.
 
@@ -414,7 +414,7 @@ Fabric-DE-CICD/
 - [ ] Virtual environment activated in terminal
 - [ ] `fab --help` works in VSCode terminal
 
-🚀 **Exercise 6 Complete!** Your development environment is ready!
+ **Exercise 6 Complete!** Your development environment is ready!
 
 ---
 
@@ -423,7 +423,7 @@ Fabric-DE-CICD/
 > [!IMPORTANT]
 > **DO NOT PROCEED** to Module 2 until all exercises are complete. This ensures a smooth workshop experience.
 
-### 📊 Exercise Summary
+###  Exercise Summary
 
 | Exercise | Completed | What You Achieved |
 |----------|-----------|------------------|
@@ -434,7 +434,7 @@ Fabric-DE-CICD/
 | **5. Clone Repository** | ✅ | Workshop code on local machine |
 | **6. VSCode Setup** | ✅ | Integrated development workspace ready |
 
-### 🛠️ Tools & Environment
+###  Tools & Environment
 ```bash
 # Run these commands to verify:
 □ git --version                    # Should show 2.25+
@@ -443,26 +443,26 @@ Fabric-DE-CICD/
 □ pip list | grep fabric           # Should show both packages
 ```
 
-### 🌐 Access & Accounts
+###  Access & Accounts
 - □ Can access https://fabric.microsoft.com
 - □ Logged in with workshop credentials (NOT work account)
 - □ Can see Data Engineering workload
 - □ GitHub account is working
 
-### 📁 Workshop Files
+###  Workshop Files
 - □ Repository cloned to local machine
 - □ VSCode opened with workshop folder
 - □ Can see all folders: configuration/, deployment/, versioning/
 - □ Terminal shows (fabric-de-workshop) in prompt
 
-### 🚀 Ready to Continue?
+###  Ready to Continue?
 Try this final test:
 ```bash
 fab --help
 ```
 If you see the fabric-cli help menu, you're ready!
 
-## 🔧 Troubleshooting Guide
+##  Troubleshooting Guide
 
 > [!TIP]
 > Most issues can be resolved quickly. Check these common problems first:
@@ -505,7 +505,7 @@ pip install --upgrade pip
 
 ---
 
-## 🔄 Resync if You're Behind (Module 1)
+##  Resync if You're Behind (Module 1)
 
 If your setup feels messy or something failed:
 
@@ -529,7 +529,7 @@ If this doesn't fix the problem, go to [`troubleshooting.md`](../troubleshooting
 
 ---
 
-## 🧠 What You Learned in Module 1
+##  What You Learned in Module 1
 
 By completing this module, you:
 
@@ -541,7 +541,7 @@ By completing this module, you:
 
 ---
 
-## 🎉 Setup Complete!
+##  Setup Complete!
 
 **Congratulations!** Your environment is ready for the workshop.
 
@@ -550,11 +550,11 @@ By completing this module, you:
 > 
 > **Your Progress:** [1] ✅ → **[2]** → [3] → [4] → [5] → [6] → [7] → [8]
 > 
-> ### 🚀 **NEXT MODULE: First Deployment**
+> ###  **NEXT MODULE: First Deployment**
 > 
-> **📁 Location:** [`/deployment/bootstrap.md`](../deployment/bootstrap.md)  
-> **⏱️ Duration:** 30 minutes  
-> **🎯 You'll Build:**
+> ** Location:** [`/deployment/bootstrap.md`](../deployment/bootstrap.md)  
+> ** Duration:** 30 minutes  
+> ** You'll Build:**
 > - Complete medallion architecture (Bronze → Silver → Gold)
 > - Lakehouses with sample data
 > - Data transformation notebooks

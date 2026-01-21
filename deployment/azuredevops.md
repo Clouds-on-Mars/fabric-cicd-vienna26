@@ -332,11 +332,11 @@ On the wizard:
     - Approval gates worked as expected
     - fabric-cicd deployed items correctly
 
-> **🎉 Congratulations!** You've successfully implemented a complete git-based CI/CD pipeline for Microsoft Fabric using Azure DevOps. Your changes now flow automatically from development through test to production with proper approvals and validation at each stage.
+> ** Congratulations!** You've successfully implemented a complete git-based CI/CD pipeline for Microsoft Fabric using Azure DevOps. Your changes now flow automatically from development through test to production with proper approvals and validation at each stage.
 
 ---
 
-## 🔄 Resync if You're Behind (Module 7)
+## Resync if You're Behind (Module 7)
 
 If your Azure DevOps pipeline isn't working:
 
@@ -369,7 +369,7 @@ Ask an instructor if you have repeated pipeline failures.
 
 ---
 
-## 🧠 What You Learned in Module 7
+## What You Learned in Module 7
 
 By completing this module, you:
 
@@ -381,7 +381,7 @@ By completing this module, you:
 
 ---
 
-## 🎓 INSTRUCTOR CHECKPOINT #3: Module 8 Readiness Validation
+## INSTRUCTOR CHECKPOINT #3: Module 8 Readiness Validation
 
 > [!IMPORTANT]
 > **Critical Module 8 Prerequisites Check** - This checkpoint ensures Azure DevOps automation infrastructure is perfectly configured for advanced schema evolution patterns.
@@ -426,7 +426,7 @@ You've successfully established the Azure DevOps foundation that enables **advan
 - ✅ fabric-cicd integration for programmatic Fabric management
 - ✅ Git-based promotion workflows through Azure DevOps
 
-### 🎯 **Module 8 Advanced Topics**
+### **Module 8 Advanced Topics**
 
 - **Schema Evolution Patterns**: [Data Artifact Changes](../versioning/data-artifact-changes.md) ← **Next Module**
 - **Non-Destructive Migration Strategies**: Safe approaches to risky data changes

@@ -145,7 +145,7 @@ Execute a complete deployment from Development → Test → Production, applying
 
 ## Module 6 Complete - Key Accomplishments
 
-🎉 **Congratulations!** You have successfully applied learnings from Modules 4 and 5 to create a complete three-stage enterprise deployment pipeline.
+ **Congratulations!** You have successfully applied learnings from Modules 4 and 5 to create a complete three-stage enterprise deployment pipeline.
 
 ### What You've Accomplished
 
@@ -176,7 +176,7 @@ Execute a complete deployment from Development → Test → Production, applying
 
 ---
 
-## 🔄 Resync if You're Behind (Module 6)
+## Resync if You're Behind (Module 6)
 
 If your three-stage pipeline isn't working:
 
@@ -202,7 +202,7 @@ Ask an instructor if you have repeated deployment failures.
 
 ---
 
-## 🧠 What You Learned in Module 6
+## What You Learned in Module 6
 
 By completing this module, you:
 
@@ -214,7 +214,7 @@ By completing this module, you:
 
 ---
 
-## 🎓 INSTRUCTOR CHECKPOINT #3
+## INSTRUCTOR CHECKPOINT #3
 
 > [!IMPORTANT]
 > **Final Three-Stage Pipeline Validation** - This completes the core workshop modules. Ensure all participants have working three-stage pipelines.
@@ -228,7 +228,7 @@ By completing this module, you:
 - [ ] Deployment rules working across all stages
 - [ ] End-to-end data processing validated in Production
 
-#### 🔧 **Critical Validation Items**
+#### **Critical Validation Items**
 ```
 Instructor will verify each participant has:
 1. Shortcut isolation working properly: ✓/✗
@@ -237,13 +237,13 @@ Instructor will verify each participant has:
 4. Power BI report showing production data: ✓/✗
 ```
 
-#### 📊 **Workshop Progress Summary**
+#### **Workshop Progress Summary**
 - **Module 4 Completion**: Production workspace via branch out ✓
 - **Module 5 Completion**: Two-stage deployment automation ✓  
 - **Module 6 Completion**: Three-stage enterprise pipeline ✓
 - Participants ready for advanced modules: ___/___
 
-#### 💡 **Knowledge Transfer Check**
+#### **Knowledge Transfer Check**
 Final discussion points:
 - How does three-stage deployment improve enterprise readiness?
 - What are the key benefits of environment isolation?
@@ -254,17 +254,17 @@ Final discussion points:
 
 ---
 
-## 📚 What's Next?
+## What's Next?
 
 > [!IMPORTANT]
 > ### ✅ Core Workshop Complete!
 > 
 > **Your Progress:** [1] ✅ → [2] ✅ → [3] ✅ → [4] ✅ → [5] ✅ → [6] ✅ → **Go Advanced Track!**
 
-### 🚀 **Advanced Automation**
+### **Advanced Automation**
 
-**📁 Location:** [`/deployment/azuredevops.md`](./azuredevops.md)  
-**🎯 You'll Learn:**
+**Location:** [`/deployment/azuredevops.md`](./azuredevops.md)  
+**You'll Learn:**
 - Azure DevOps CI/CD automation
 - YAML pipeline definitions
 - fabric-cicd patterns

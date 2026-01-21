@@ -3,7 +3,7 @@
 > [!NOTE]
 > **Difficulty:** Intermediate | [← Back to Version Control](../versioning/module3-version-control.md) | [Next: Deployment Pipelines →](./module5-deployment-pipelines.md)
 
-## 🎯 Module Objectives
+## Module Objectives
 
 Learn how to use Microsoft Fabric's "Branch out to new workspace" capability to create isolated production environments:
 
@@ -16,7 +16,7 @@ Learn how to use Microsoft Fabric's "Branch out to new workspace" capability to 
 > **Why Production Workspace?**  
 > The `DEWorkshop_<username>` workspace represents your **development environment**, always synced with the main branch. The production workspace allows safe deployment validation and production data isolation from development workflows.
 
-## 📋 Module Exercise Flow
+## Module Exercise Flow
 
 You'll complete 4 hands-on exercises:
 
@@ -29,7 +29,7 @@ You'll complete 4 hands-on exercises:
 
 > **Track Your Progress:** Check off each exercise as you complete it!
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ```mermaid
 graph TD
@@ -42,7 +42,7 @@ graph TD
     style D fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
-## 📋 Pre-Module Checklist
+## Pre-Module Checklist
 
 > [!IMPORTANT]
 > Ensure all items are checked before proceeding:
@@ -54,7 +54,7 @@ graph TD
 
 ---
 
-## 📝 Exercise 1: Create Production Workspace (15 minutes)
+## Exercise 1: Create Production Workspace (15 minutes)
 
 > **Goal:** Create a production workspace using Microsoft Fabric's "Branch out to new workspace" capability.
 >
@@ -96,11 +96,11 @@ graph TD
 - [ ] Workspace assigned to capacity
 - [ ] Can access the new workspace in Fabric portal
 
-🔗 **Exercise 1 Complete!** Production workspace is ready with automatic Git integration.
+**Exercise 1 Complete!** Production workspace is ready with automatic Git integration.
 
 ---
 
-## 📝 Exercise 2: Validate Branch and Workspace Integration (10 minutes)
+## Exercise 2: Validate Branch and Workspace Integration (10 minutes)
 
 > **Goal:** Verify that the branch out process created everything correctly and understand the automatic integration.
 >
@@ -141,11 +141,11 @@ graph TD
 - [ ] Both branches exist in Azure DevOps
 - [ ] Production branch contains all workspace artifacts
 
-🔗 **Exercise 2 Complete!** Branch out process created perfect Git integration automatically.
+**Exercise 2 Complete!** Branch out process created perfect Git integration automatically.
 
 ---
 
-## 📝 Exercise 3: Discover What's Broken (15 minutes)
+## Exercise 3: Discover What's Broken (15 minutes)
 
 > **Goal:** Understand that while code artifacts are copied, data connections and dependencies are not automatically remapped.
 >
@@ -208,14 +208,14 @@ graph TD
 - [ ] Semantic model points to development data sources
 - [ ] Report shows development data, not production data
 
-🔗 **Exercise 3 Complete!** You've discovered the isolation is not complete yet.
+**Exercise 3 Complete!** You've discovered the isolation is not complete yet.
 
 > [!IMPORTANT]
 > **Key Insight:** We wanted a complete isolated production environment, but we don't have it yet! The deployment script in Module 2 did a bunch of remapping of connections to point to the right places. We need to do that same remapping for our production workspace. All this will be fixed in the next module.
 
 ---
 
-## 📝 Exercise 4: Understanding the Required Fixes (10 minutes)
+## Exercise 4: Understanding the Required Fixes (10 minutes)
 
 > **Goal:** Understand what needs to be fixed to achieve true workspace isolation.
 >
@@ -254,11 +254,11 @@ In Module 5, we'll learn how to:
 - [ ] What the deployment script does for connection remapping
 - [ ] What we'll fix in the next module
 
-🔗 **Exercise 4 Complete!** Ready to learn about deployment automation!
+**Exercise 4 Complete!** Ready to learn about deployment automation!
 
 ---
 
-## 🔄 Resync if You're Behind (Module 4)
+## Resync if You're Behind (Module 4)
 
 If your branches or workspaces are in a strange state:
 
@@ -282,7 +282,7 @@ Ask an instructor if you're unsure which state you're in.
 
 ---
 
-## 🧠 What You Learned in Module 4
+## What You Learned in Module 4
 
 By completing this module, you:
 
@@ -294,7 +294,7 @@ By completing this module, you:
 
 ---
 
-## 🎯 Module Takeaways
+## Module Takeaways
 
 ### ✅ What You Accomplished
 
@@ -305,14 +305,14 @@ You successfully created a production workspace using Fabric's "Branch out" capa
 3. **✅ Code Artifacts Copied**: All notebooks, pipelines, and reports were copied to production workspace
 4. **❌ Data Isolation Incomplete**: Discovered that data connections still point to development workspace
 
-### 🔑 Key Insights
+### Key Insights
 
 - **Branch Out Benefits**: Automatically creates branch AND connects workspace - very convenient!
 - **Code vs Data**: Code artifacts sync via Git, but data connections need manual remapping
 - **Connection Dependencies**: Notebooks, semantic models, and reports maintain their original workspace references
 - **Deployment Automation Need**: Manual remapping is tedious - automation is essential for enterprise use
 
-### 🚀 What's Next
+### What's Next
 
 In **Module 5: Deployment Pipelines**, you'll learn how to:
 - Use deployment pipelines to automatically remap all workspace connections
@@ -320,7 +320,7 @@ In **Module 5: Deployment Pipelines**, you'll learn how to:
 - Run deployment automation to achieve complete production environment setup
 - Validate that your production workspace is truly isolated from development
 
-### ⏱️ Time Investment
+### Time Investment
 
 | Exercise | Duration | Key Learning |
 |----------|----------|--------------|
