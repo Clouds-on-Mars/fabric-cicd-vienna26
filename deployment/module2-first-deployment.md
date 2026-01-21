@@ -92,6 +92,14 @@ fab auth login
 5. Grant permissions to fabric-cli
 6. Return to terminal when complete
 
+> [!TIP]
+> **Wrong Tenant Error?** If you see an error like `AADSTS50020: User account does not exist in tenant`, try:
+> ```bash
+> fab auth logout
+> fab auth login --tenant rocksonearth.onmicrosoft.com
+> ```
+> This explicitly tells the CLI to use the workshop tenant.
+
 **Verify authentication:**
 ```bash
 fab auth status
