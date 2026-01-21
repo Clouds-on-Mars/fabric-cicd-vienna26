@@ -77,7 +77,7 @@ graph LR
 ### Step 1.1: Login to Azure DevOps
 
 1. **Navigate to Azure DevOps:**
-   - Open your browser to: `https://dev.azure.com/FabConEU`
+   - Open your browser to: `https://dev.azure.com`
    - Use the workshop credentials provided by your instructor
 
 2. **Verify access:**
