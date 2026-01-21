@@ -251,17 +251,11 @@ VSCode will be our primary development environment for the workshop.
 ### Navigate to Microsoft Fabric
 Visit the Microsoft Fabric website at [https://fabric.microsoft.com/](https://fabric.microsoft.com/).
 
-![Fabric Portal](../screenshots/setup/fabric-portal-login.png)
-
 ### Log In with Workshop Credentials
 Use the credentials provided by the workshop instructor (typically on a business card or shared document).
 
-![Login Credentials](../screenshots/setup/fabric-login.png)
-
 ### Enter Your Password and Sign In
 Input your password in the designated field and click the `Sign In` button.
-
-![Password Entry](../screenshots/setup/fabric-password.png)
 
 ### Update Your Password (If Required)
 You may be required to update your password upon first login. Follow the prompts to do so.
@@ -272,18 +266,12 @@ You may be required to update your password upon first login. Follow the prompts
 ### Setup Multi-Factor Authentication (MFA)
 If prompted for MFA setup, you can defer this by selecting `Ask Me Later` for workshop purposes.
 
-![MFA Setup](../screenshots/setup/fabric-mfa.png)
-
 ### Welcome to Microsoft Fabric
 You have successfully logged in to Microsoft Fabric!
-
-![Fabric Welcome](../screenshots/setup/fabric-welcome.png)
 
 ### Explore Data Engineering Workload
 1. Click the Microsoft Fabric icon in the bottom left corner
 2. Select **Data Engineering** from the workload menu
-
-![Workload Selection](../screenshots/setup/fabric-workloads.png)
 
 ### ✅ Exercise 4 Checkpoint
 
@@ -314,8 +302,6 @@ You have successfully logged in to Microsoft Fabric!
 2. **If you have an existing GitHub account:**
    - Sign in at [github.com](https://github.com)
 
-![GitHub Login](../screenshots/setup/github-login.png)
-
 ### 📦 Clone the Workshop Repository
 
 1. **Open the workshop repository:**
@@ -344,8 +330,6 @@ You have successfully logged in to Microsoft Fabric!
    **Option C: Download ZIP (Not recommended for workshop)**
    - Click "Code" → "Download ZIP" on the GitHub repository page
    - Extract to your desired location
-
-![Repository Clone](../screenshots/setup/github-clone.png)
 
 ### Verify Repository Structure
 Your cloned repository should contain:
@@ -385,8 +369,6 @@ Fabric-DE-CICD/
    - VSCode should show the repository files in the Explorer panel
    - The integrated terminal should be available (Terminal → New Terminal)
    - Python extension should be active
-
-![VSCode Repository](../screenshots/setup/vscode-repository.png)
 
 4. **Activate your virtual environment in VSCode terminal:**
    ```bash
