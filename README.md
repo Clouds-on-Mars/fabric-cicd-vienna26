@@ -80,10 +80,21 @@ Bronze Lakehouse → Spark Notebooks → Silver Lakehouse → Semantic Model →
 
 ## Prerequisites
 
-- Microsoft Fabric Capacity (Trial or Premium) - no need. We will distribute login and password for each participant.
+- **Microsoft Fabric Account** - We provide workshop credentials (see below)
 - Git repository access (GitHub or Azure DevOps)
 - Python 3.11+, Git CLI, VS Code
 - Workspace admin permissions
+
+### 🔐 Workshop Credentials
+
+For this workshop, we provide shared Fabric accounts. **Claim your login credentials:**
+
+1. Go to the [**Workshop Credentials Sheet**](https://docs.google.com/spreadsheets/d/1Xz7DP_iV_xuMCDLoFELGTHVsb49bpNMuQhqn1wPNDv4/edit?usp=sharing)
+2. Find an available row (one without a name in the "Claimed By" column)
+3. **Put your name** in the "Claimed By" column to reserve those credentials
+4. Use the **Login** and **Password** from that row to sign into Microsoft Fabric
+
+> ⚠️ **Important**: Each participant should claim only ONE set of credentials. Once you add your name, those credentials are yours for the entire workshop.
 
 ---
 
