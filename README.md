@@ -50,12 +50,6 @@ Before you begin, claim your Fabric login credentials:
 
 ## Workshop Modules
 
-### Pre-Workshop (Optional)
-
-| Module | Time | Description |
-|--------|------|-------------|
-| [**0. Terraform**](./infrastructure/module0-terraform.md) | 30 min | Deploy workspaces via Infrastructure as Code |
-
 ### Morning Session (9:00 - 13:00)
 
 | Module | Time | Description |
@@ -76,6 +70,12 @@ Before you begin, claim your Fabric login credentials:
 | *Break* | 30 min | |
 | [**8. Schema Evolution**](./versioning/data-artifact-changes.md) | 45 min | Handle breaking changes |
 | **Wrap-up & Q&A** | 30 min | Review and next steps |
+
+### Post-Workshop (Optional)
+
+| Module | Time | Description |
+|--------|------|-------------|
+| [**0. Terraform**](./infrastructure/module0-terraform.md) | 30 min | Deploy workspaces via Infrastructure as Code |
 
 ---
 
