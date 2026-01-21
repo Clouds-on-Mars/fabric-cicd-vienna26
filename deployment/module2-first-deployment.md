@@ -149,11 +149,11 @@ ls
 ```
 
 > [!TIP]
-> **Confirming Your Capacity Name:**
-> 1. Go to Fabric portal
-> 2. Click Settings (⚙️) → Admin portal
-> 3. Select "Capacities"
-> 4. Copy the exact capacity name
+> **Finding Your Capacity Name (Trial License):**
+> 1. Go to Fabric portal → open My workspace
+> 2. Click **Workspace settings** (⚙️)
+> 3. Select **License info**
+> 4. Copy the **License capacity** name (e.g., `Trial-20250506T124643Z-j2uGFlQLmESKhK9MYO2R8A`)
 
 ### Step 3: Monitor the Deployment Progress
 
