@@ -1,7 +1,7 @@
 # Module 4: Branch Management - Production Environment Setup
 
 > [!NOTE]
-> **Duration:** 60 minutes | **Difficulty:** Intermediate | [← Back to Version Control](../versioning/module3-version-control.md) | [Next: Deployment Pipelines →](./module5-deployment-pipelines.md)
+> **Difficulty:** Intermediate | [← Back to Version Control](../versioning/module3-version-control.md) | [Next: Deployment Pipelines →](./module5-deployment-pipelines.md)
 
 ## 🎯 Module Objectives
 

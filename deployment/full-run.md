@@ -1,7 +1,7 @@
 # Module 6: End-to-End Pipeline - Three-Stage Deployment
 
 > [!NOTE]
-> **Duration:** 45 minutes | **Difficulty:** Intermediate | [← Back to Deployment Pipelines](./module5-deployment-pipelines.md) | [Next: Azure DevOps →](./azuredevops.md)
+> **Difficulty:** Intermediate | [← Back to Deployment Pipelines](./module5-deployment-pipelines.md) | [Next: Azure DevOps →](./azuredevops.md)
 
 ## Overview
 
@@ -264,7 +264,6 @@ Final discussion points:
 ### 🚀 **Advanced Automation**
 
 **📁 Location:** [`/deployment/azuredevops.md`](./azuredevops.md)  
-**⏱️ Duration:** 30 minutes  
 **🎯 You'll Learn:**
 - Azure DevOps CI/CD automation
 - YAML pipeline definitions

@@ -1,7 +1,7 @@
 # Module 3: Version Control Basics - Mastering Git Integration
 
 > [!NOTE]
-> **Duration:** 30 minutes | **Difficulty:** Intermediate | [← Back to Deployment](../deployment/module2-first-deployment.md) | [Next: Branch Management →](../deployment/module4-branch-management.md)
+> **Difficulty:** Intermediate | [← Back to Deployment](../deployment/module2-first-deployment.md) | [Next: Branch Management →](../deployment/module4-branch-management.md)
 
 ## 🎯 Module Objectives
 
@@ -536,7 +536,6 @@ By completing this module, you:
 > ### 🚀 **NEXT MODULE: Branch Management**
 > 
 > **📁 Location:** [`/deployment/module4-branch-management.md`](../deployment/module4-branch-management.md)  
-> **⏱️ Duration:** 60 minutes  
 > **🎯 You'll Learn:**
 > - Create feature branches for isolated development
 > - Deploy branches to separate workspaces

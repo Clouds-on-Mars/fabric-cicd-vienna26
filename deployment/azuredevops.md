@@ -1,7 +1,7 @@
 # Module 7: Azure DevOps Pipelines - Git-Based Deployments
 
 > [!NOTE]
-> **Duration:** 45 minutes | **Difficulty:** Advanced | [← Back to End-to-End Pipeline](./full-run.md) | [Next: Schema Evolution →](../versioning/data-artifact-changes.md)
+> **Difficulty:** Advanced | [← Back to End-to-End Pipeline](./full-run.md) | [Next: Schema Evolution →](../versioning/data-artifact-changes.md)
 
 ## Overview
 

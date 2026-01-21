@@ -1,7 +1,7 @@
 # Module 2: First Deployment - Building Your Foundation
 
 > [!NOTE]
-> **Duration:** 30 minutes | **Difficulty:** Beginner | [← Back to Setup](../configuration/module1-environment-setup.md) | [Next: Version Control →](../versioning/module3-version-control.md)
+> **Difficulty:** Beginner | [← Back to Setup](../configuration/module1-environment-setup.md) | [Next: Version Control →](../versioning/module3-version-control.md)
 
 ## 🎯 Module Objectives
 
@@ -514,7 +514,6 @@ By completing this module, you:
 > ### 🔄 **NEXT MODULE: Version Control Basics**
 > 
 > **📁 Location:** [`/versioning/module3-version-control.md`](../versioning/module3-version-control.md)  
-> **⏱️ Duration:** 30 minutes  
 > **🎯 You'll Learn:**
 > - Connect workspace to Git repository
 > - Push changes from Fabric to Git

@@ -1,7 +1,7 @@
 # Module 8: Schema Changes with Spark SQL DDL - Practical Git & Azure DevOps Workflows
 
 > [!NOTE]
-> **Duration:** 45 minutes | **Difficulty:** Advanced | [← Back to Azure DevOps](../deployment/azuredevops.md) | [Home](../README.md)
+> **Difficulty:** Advanced | [← Back to Azure DevOps](../deployment/azuredevops.md) | [Home](../README.md)
 
 ## Overview
 

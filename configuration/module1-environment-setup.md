@@ -1,7 +1,7 @@
 # Module 1: Environment Setup - Getting Started
 
 > [!NOTE]
-> **Duration:** 30 minutes | **Difficulty:** Beginner | [← Back to Workshop Home](../README.md) | [Next: First Deployment →](../deployment/module2-first-deployment.md)
+> **Difficulty:** Beginner | [← Back to Workshop Home](../README.md) | [Next: First Deployment →](../deployment/module2-first-deployment.md)
 
 ## 🎯 Module Objectives
 
@@ -553,7 +553,6 @@ By completing this module, you:
 > ### 🚀 **NEXT MODULE: First Deployment**
 > 
 > **📁 Location:** [`/deployment/module2-first-deployment.md`](../deployment/module2-first-deployment.md)  
-> **⏱️ Duration:** 30 minutes  
 > **🎯 You'll Build:**
 > - Complete medallion architecture (Bronze → Silver → Gold)
 > - Lakehouses with sample data

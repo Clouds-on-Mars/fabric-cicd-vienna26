@@ -1,7 +1,7 @@
 # Module 5: Deployment Pipelines - Enterprise Automation
 
 > [!NOTE]
-> **Duration:** 60 minutes | **Difficulty:** Intermediate | [← Back to Branch Management](./module4-branch-management.md) | [Next: End-to-End Pipeline →](./full-run.md)
+> **Difficulty:** Intermediate | [← Back to Branch Management](./module4-branch-management.md) | [Next: End-to-End Pipeline →](./full-run.md)
 
 ## Overview
 

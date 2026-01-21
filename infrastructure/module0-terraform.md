@@ -1,7 +1,7 @@
 # Module 0: Infrastructure as Code with Terraform
 
 > [!NOTE]
-> **Duration:** 30 minutes | **Difficulty:** Intermediate | [Next: Environment Setup →](../configuration/module1-environment-setup.md)
+> **Difficulty:** Intermediate | [Next: Environment Setup →](../configuration/module1-environment-setup.md)
 
 ## Overview
 
