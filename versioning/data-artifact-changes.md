@@ -1,6 +1,7 @@
 # Module 8: Schema Changes with Spark SQL DDL - Practical Git & Azure DevOps Workflows
 
-[← Back to Azure DevOps](../deployment/azuredevops.md) | [Home](../README.md)
+> [!NOTE]
+> **Duration:** 45 minutes | **Difficulty:** Advanced | [← Back to Azure DevOps](../deployment/azuredevops.md) | [Home](../README.md)
 
 ## Overview
 
@@ -398,6 +399,50 @@ You have successfully:
 - [x] **Validated changes** across all three environments
 
 The foundation you've built provides enterprise-grade schema evolution capabilities for Microsoft Fabric data engineering projects.
+
+---
+
+## 🔄 Resync if You're Behind (Module 8)
+
+If your schema changes aren't working or you're stuck:
+
+1. **Check your virtual environment is active**
+   ```bash
+   source fabric-de-workshop/bin/activate
+   ```
+
+2. **Verify Fabric CLI is authenticated**
+   ```bash
+   fab ls /
+   ```
+   - If this fails, rerun `fab auth login`
+
+3. **Check your workspace and branch connections**
+   - Ensure Development workspace is connected to `main` branch
+   - Ensure Test workspace is connected to `test` branch
+   - Ensure Production workspace is connected to `production` branch
+
+4. **If notebooks aren't syncing**
+   - Check Git integration status in workspace settings
+   - Try manual sync: Source Control → Sync
+   - Verify Azure DevOps pipelines are running
+
+Still not working? Use [`troubleshooting.md`](../troubleshooting.md) and ask an instructor.
+
+---
+
+## 🧠 What You Learned in Module 8
+
+By completing this module, you:
+
+- ✅ Implemented **additive schema changes** using Spark SQL DDL (CREATE TABLE)
+- ✅ Managed **destructive schema changes** (DROP COLUMN) with proper risk controls
+- ✅ Used **git workflows** (branches + pull requests) for controlled deployment progression
+- ✅ Applied **approval gates** in Azure DevOps for production risk management
+- ✅ Validated schema changes across all three environments (Dev → Test → Prod)
+- ✅ Learned best practices for enterprise-grade schema evolution
+
+---
 
 > [!SUCCESS]
 > **Module 8 Complete!** You've mastered practical schema evolution using Spark SQL DDL, git workflows, and Azure DevOps automation.

@@ -19,7 +19,7 @@
 
 ### fabric-cli Installation Fails
 
-**Problem**: `pip install fabric-cli` fails with permission errors
+**Problem**: `pip install ms-fabric-cli` fails with permission errors
 ```bash
 ERROR: Could not install packages due to an OSError
 ```
@@ -27,15 +27,15 @@ ERROR: Could not install packages due to an OSError
 **Solution**:
 ```bash
 # Option 1: Install in user space
-pip install --user fabric-cli
+pip install --user ms-fabric-cli
 
 # Option 2: Use virtual environment (recommended)
 python -m venv fabric-env
 source fabric-env/bin/activate  # On Windows: fabric-env\Scripts\activate
-pip install fabric-cli
+pip install ms-fabric-cli
 
 # Option 3: Force reinstall
-pip install --force-reinstall fabric-cli
+pip install --force-reinstall ms-fabric-cli
 ```
 
 ### fabric-cli Command Not Found
@@ -48,7 +48,7 @@ bash: fab: command not found
 **Solution**:
 ```bash
 # Check if fabric-cli is installed
-pip show fabric-cli
+pip show ms-fabric-cli
 
 # Add Python scripts to PATH
 export PATH="$PATH:$(python -m site --user-base)/bin"
@@ -60,9 +60,9 @@ source ~/.bashrc
 
 ### Python Version Incompatibility
 
-**Problem**: fabric-cli requires Python 3.8+
+**Problem**: fabric-cli requires Python 3.10+
 ```bash
-ERROR: This version of fabric-cli requires Python 3.8 or later
+ERROR: This version of ms-fabric-cli requires Python 3.10 or later
 ```
 
 **Solution**:
@@ -70,7 +70,7 @@ ERROR: This version of fabric-cli requires Python 3.8 or later
 # Check Python version
 python --version
 
-# Install Python 3.8+ if needed
+# Install Python 3.10+ if needed
 # macOS
 brew install python@3.11
 
@@ -102,10 +102,10 @@ export FABRIC_CLIENT_ID="your-client-id"
 export FABRIC_CLIENT_SECRET="your-client-secret"
 
 # Test authentication
-fab login
+fab auth login
 
 # Alternative: Use certificate authentication
-fab login --cert-path ./cert.pem --cert-password "password"
+fab auth login --cert-path ./cert.pem --cert-password "password"
 ```
 
 ### Token Expiration
@@ -118,13 +118,13 @@ Error: The access token has expired. Please re-authenticate.
 **Solution**:
 ```bash
 # Clear cached credentials
-fab logout
+fab auth logout
 
 # Re-authenticate
-fab login
+fab auth login
 
 # For automated scripts, implement token refresh
-fab login --refresh-token
+fab auth login --refresh-token
 ```
 
 ### Insufficient Permissions
@@ -135,10 +135,9 @@ Error: Forbidden. User does not have permission to perform this action
 ```
 
 **Solution**:
-1. Verify workspace permissions:
-```bash
-fab workspace get-permissions --workspace "DEWorkshop_username"
-```
+1. Verify workspace permissions in Fabric portal:
+   - Navigate to workspace settings
+   - Check "Manage access" for your user/service principal
 
 2. Grant necessary permissions:
    - Navigate to workspace settings in Fabric portal
@@ -163,17 +162,14 @@ Error during deployment: Item already exists
 
 **Solution**:
 ```bash
-# Option 1: Clean workspace and retry
-fab workspace delete-all-items --workspace "DEWorkshop_username"
-./scripts/first_deployment.sh
+# Option 1: Delete items manually in Fabric portal and retry
+./first_deployment.sh
 
-# Option 2: Use force flag
-./scripts/first_deployment.sh --force
+# Option 2: Use force flag (if supported)
+./first_deployment.sh --force
 
-# Option 3: Deploy incrementally
-fab deploy ./items/lakehouse/Lakehouse_Bronze.json
-fab deploy ./items/lakehouse/Lakehouse_Silver.json
-fab deploy ./items/notebook/*.json
+# Option 3: Check workspace items using fabric-cli
+fab ls /DEWorkshop_username.Workspace
 ```
 
 ### Notebook Deployment Missing Dependencies
@@ -214,27 +210,22 @@ Error: The data source for this report is not available
 ```
 
 **Solution**:
-1. Update connection strings:
+1. Update connection strings using fabric-cli:
 ```bash
-# Get semantic model
-fab get MySemanticModel.SemanticModel --format json > model.json
+# Navigate to workspace
+fab cd /DEWorkshop_username.Workspace
 
-# Update connection
-jq '.properties.dataSources[0].connectionString = "new-connection"' model.json > updated.json
+# Get semantic model properties
+fab get MySemanticModel.SemanticModel
 
-# Deploy updated model
-fab deploy updated.json
+# Export semantic model definition
+fab export MySemanticModel.SemanticModel -o ./backup/
 ```
 
-2. Use deployment rules for automatic remapping:
-```json
-{
-  "semanticModelRules": {
-    "updateDataSource": true,
-    "targetWorkspace": "${WORKSPACE_ID}",
-    "targetLakehouse": "${LAKEHOUSE_ID}"
-  }
-}
+2. Use Fabric Deployment Rules for automatic remapping (recommended):
+   - Configure deployment rules in the Deployment Pipeline UI
+   - Set data source rules for the semantic model
+   - Rules will automatically remap connections during deployment
 ```
 
 ---
@@ -586,74 +577,47 @@ df.repartition(200, "date_key") \
 fab --version
 
 # Verify authentication
-fab whoami
+fab auth status
 
 # List workspaces
-fab workspace list
+fab ls /
 
 # Check workspace items
 fab ls /DEWorkshop_username.Workspace
 
-# Get deployment pipeline status
-fab pipeline status --pipeline "DEWorkshop_Pipeline"
+# Navigate to a workspace
+fab cd /DEWorkshop_username.Workspace
 
-# View recent deployments
-fab pipeline history --pipeline "DEWorkshop_Pipeline" --limit 10
-
-# Check Git sync status
-fab git status --workspace "DEWorkshop_username"
-
-# Get error logs
-fab logs --workspace "DEWorkshop_username" --hours 1
+# Get item properties
+fab get Lakehouse_Silver.Lakehouse
 ```
+
+> **Note**: Deployment pipeline status and Git sync are managed through the Fabric portal UI, not CLI commands.
 
 ### Emergency Recovery
 
 ```bash
-# Backup workspace items
-fab workspace export \
-  --workspace "DEWorkshop_username" \
-  --output ./backup/
+# Export workspace items
+fab cd /DEWorkshop_username.Workspace
+fab export Lakehouse_Silver.Lakehouse -o ./backup/
+fab export MyNotebook.Notebook -o ./backup/
 
-# Restore from backup
-fab workspace import \
-  --workspace "DEWorkshop_username_Recovery" \
-  --input ./backup/
-
-# Rollback deployment
-fab pipeline rollback \
-  --pipeline "DEWorkshop_Pipeline" \
-  --stage "Production" \
-  --deployment-id "last"
-
-# Force sync from Git
-fab git sync \
-  --workspace "DEWorkshop_username" \
-  --direction "git-to-workspace" \
-  --force
-
-# Clear cache
-fab cache clear --all
+# Import items to a different workspace
+fab cd /DEWorkshop_username_Recovery.Workspace
+fab import MyNotebook.Notebook -i ./backup/MyNotebook.Notebook/
 ```
+
+> **Note**: For Git sync and deployment pipeline rollbacks, use the Fabric portal UI:
+> - **Git sync**: Workspace Settings → Git integration → "Update all" or "Commit all"
+> - **Rollback**: Open deployment pipeline → History → Select previous deployment → Revert
 
 ### Performance Monitoring
 
-```bash
-# Check resource usage
-fab workspace get-metrics \
-  --workspace "DEWorkshop_username" \
-  --metric "cpu,memory,storage"
+Performance monitoring is available through the Fabric portal:
 
-# Monitor active queries
-fab workspace get-queries \
-  --workspace "DEWorkshop_username" \
-  --status "running"
-
-# Get slow query report
-fab workspace analyze-performance \
-  --workspace "DEWorkshop_username" \
-  --threshold-seconds 60
-```
+1. **Capacity Metrics**: Admin portal → Capacities → View metrics
+2. **Workspace Usage**: Workspace settings → Usage metrics
+3. **Query Performance**: Lakehouse SQL endpoint → Query history
 
 ---
 
@@ -688,17 +652,15 @@ fab workspace analyze-performance \
 Enable verbose logging for detailed error information:
 
 ```bash
-# Set debug environment variable
-export FABRIC_DEBUG=true
+# Enable debug mode in fabric-cli config
+fab config set debug_enabled true
 
-# Or use debug flag
-fab deploy ./items/* --debug
+# Run commands to see detailed output
+fab ls /
 
-# Enable Python debugging
+# For Python/fabric-cicd debugging
 export PYTHONVERBOSE=1
-
-# Capture full error traces
-fab deploy 2>&1 | tee deployment.log
+python deploy_script.py 2>&1 | tee deployment.log
 ```
 
 ### Common Error Codes

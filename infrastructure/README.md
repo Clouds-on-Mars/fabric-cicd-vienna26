@@ -6,7 +6,7 @@ This directory contains Terraform configurations for deploying Microsoft Fabric 
 
 ```
 infrastructure/
-├── terraform.md          # Module 0: Terraform tutorial
+├── module0-terraform.md  # Module 0: Terraform tutorial
 └── terraform/
     ├── main.tf           # Provider configuration
     ├── variables.tf      # Input variables
@@ -58,4 +58,4 @@ terraform apply tfplan
 
 ## Learn More
 
-See [Module 0: Infrastructure as Code with Terraform](./terraform.md) for the full tutorial.
+See [Module 0: Infrastructure as Code with Terraform](./module0-terraform.md) for the full tutorial.

@@ -336,6 +336,51 @@ On the wizard:
 
 ---
 
+## 🔄 Resync if You're Behind (Module 7)
+
+If your Azure DevOps pipeline isn't working:
+
+1. **Verify the YAML pipeline file exists**
+   - Check `deploy-to-fabric.yml` is in your repo root
+   - Ensure syntax is valid (no YAML parsing errors)
+
+2. **Check environment configuration**
+   - Go to Pipelines → Environments
+   - Verify Test and Production environments exist
+   - Check approval gates are configured correctly
+
+3. **If pipeline fails on fabric-cicd installation**
+   ```bash
+   # The pipeline should run:
+   pip install fabric-cicd
+   ```
+   - Check Python version compatibility
+
+4. **If deployment step fails**
+   - Review pipeline logs for specific error
+   - Verify `parameter.yml` has correct workspace IDs
+   - Check service principal permissions
+
+5. **If pull request doesn't trigger pipeline**
+   - Verify trigger configuration in YAML
+   - Check branch policies allow pipeline runs
+
+Ask an instructor if you have repeated pipeline failures.
+
+---
+
+## 🧠 What You Learned in Module 7
+
+By completing this module, you:
+
+- ✅ Explored Azure DevOps environments and approval gates
+- ✅ Understood YAML pipeline structure for Fabric deployments
+- ✅ Used `fabric-cicd` library for automated deployments
+- ✅ Executed a git-based CI/CD workflow (main → test → production)
+- ✅ Validated end-to-end automated deployment across environments
+
+---
+
 ## 🎓 INSTRUCTOR CHECKPOINT #3: Module 8 Readiness Validation
 
 > [!IMPORTANT]

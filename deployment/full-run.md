@@ -1,7 +1,7 @@
 # Module 6: End-to-End Pipeline - Three-Stage Deployment
 
 > [!NOTE]
-> **Duration:** 45 minutes | **Difficulty:** Intermediate | [← Back to Deployment Pipelines](./start.md) | [Next: Azure DevOps →](./azuredevops.md)
+> **Duration:** 45 minutes | **Difficulty:** Intermediate | [← Back to Deployment Pipelines](./module5-deployment-pipelines.md) | [Next: Azure DevOps →](./azuredevops.md)
 
 ## Overview
 
@@ -176,6 +176,44 @@ Execute a complete deployment from Development → Test → Production, applying
 
 ---
 
+## 🔄 Resync if You're Behind (Module 6)
+
+If your three-stage pipeline isn't working:
+
+1. **Verify all three workspaces exist**
+   - `DEWorkshop_<username>` (Dev)
+   - `DEWorkshop_<username>_Test` (Test)
+   - `DEWorkshop_<username>_Prod` (Prod)
+
+2. **Check deployment pipeline has three stages**
+   - Open your deployment pipeline
+   - Confirm Dev, Test, and Prod stages are all configured
+
+3. **Verify variable library has all three value sets**
+   - Open `MyVarLib` and check Development, Test, Production sets exist
+   - Ensure all IDs are correct for each environment
+
+4. **If a stage fails validation**
+   - Rerun the deployment from the previous stage
+   - Make sure the active variable set is correct
+   - Run "Update all variables" in the lakehouses
+
+Ask an instructor if you have repeated deployment failures.
+
+---
+
+## 🧠 What You Learned in Module 6
+
+By completing this module, you:
+
+- ✅ Created a three-stage deployment pipeline (Dev → Test → Prod)
+- ✅ Extended the variable library for all three environments
+- ✅ Executed end-to-end deployment validation across all stages
+- ✅ Verified complete data isolation in production
+- ✅ Mastered enterprise-grade deployment patterns
+
+---
+
 ## 🎓 INSTRUCTOR CHECKPOINT #3
 
 > [!IMPORTANT]
@@ -244,5 +282,5 @@ Final discussion points:
 
 ---
 
-| [← Module 5: Deployment Pipelines](./start.md) | [Home](../README.md) | [Module 7: Azure DevOps →](./azuredevops.md) |
+| [← Module 5: Deployment Pipelines](./module5-deployment-pipelines.md) | [Home](../README.md) | [Module 7: Azure DevOps →](./azuredevops.md) |
 |:-----------------------------------------------|:--------------------:|---------------------------------------------:|
