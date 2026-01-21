@@ -201,4 +201,4 @@ The workshop demonstrates this progression: start with fabric-cli fundamentals, 
 - [fabric-cli GitHub Repository](https://github.com/microsoft/fabric-cli)
 - [fabric-cicd GitHub Repository](https://github.com/microsoft/fabric-cicd)
 - [Microsoft Fabric Documentation](https://learn.microsoft.com/fabric/)
-- [Workshop Repository](https://github.com/DaniBunny/Fabric-DE-CICD)
+- [Workshop Repository](https://github.com/Clouds-on-Mars/fabric-cicd-vienna26)

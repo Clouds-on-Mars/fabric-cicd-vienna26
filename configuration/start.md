@@ -320,7 +320,7 @@ You have successfully logged in to Microsoft Fabric!
 
 1. **Open the workshop repository:**
    
-   🔗 [https://github.com/DaniBunny/Fabric-DE-CICD](https://github.com/DaniBunny/Fabric-DE-CICD)
+   🔗 [https://github.com/Clouds-on-Mars/fabric-cicd-vienna26](https://github.com/Clouds-on-Mars/fabric-cicd-vienna26)
 
 2. **Copy it to your machine:**
    
@@ -330,16 +330,16 @@ You have successfully logged in to Microsoft Fabric!
    cd ~/Documents  # or your preferred location
    
    # Clone the repository
-   git clone https://github.com/DaniBunny/Fabric-DE-CICD.git
+   git clone https://github.com/Clouds-on-Mars/fabric-cicd-vienna26.git
    
    # Navigate into the cloned directory
-   cd Fabric-DE-CICD
+   cd fabric-cicd-vienna26
    ```
 
    **Option B: Using GitHub Desktop**
    - Download GitHub Desktop from [desktop.github.com](https://desktop.github.com/)
    - Use "Clone a repository from the Internet"
-   - Enter: `https://github.com/DaniBunny/Fabric-DE-CICD`
+   - Enter: `https://github.com/Clouds-on-Mars/fabric-cicd-vienna26`
 
    **Option C: Download ZIP (Not recommended for workshop)**
    - Click "Code" → "Download ZIP" on the GitHub repository page

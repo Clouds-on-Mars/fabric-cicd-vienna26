@@ -479,8 +479,8 @@ If your Git repo is in a strange state or you're getting merge errors:
      ```
    - Re-clone the repository:
      ```bash
-     git clone https://github.com/DaniBunny/Fabric-DE-CICD.git
-     cd Fabric-DE-CICD
+     git clone https://github.com/Clouds-on-Mars/fabric-cicd-vienna26.git
+     cd fabric-cicd-vienna26
      ```
    - Reactivate your virtualenv and continue from the current exercise.
 
