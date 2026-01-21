@@ -85,10 +85,12 @@ fab auth login
 ```
 
 **What happens:**
-1. Browser opens to Microsoft login
-2. Sign in with workshop credentials
-3. Grant permissions to fabric-cli
-4. Return to terminal when complete
+1. Terminal prompts for authentication method
+2. **Select: `Interactive with a web browser`**
+3. Browser opens to Microsoft login
+4. Sign in with workshop credentials
+5. Grant permissions to fabric-cli
+6. Return to terminal when complete
 
 **Verify authentication:**
 ```bash
