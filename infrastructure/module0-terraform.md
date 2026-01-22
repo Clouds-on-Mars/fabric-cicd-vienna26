@@ -52,12 +52,18 @@ terraform {
 
 provider "fabric" {
   # Uses Azure CLI authentication by default
+  preview = true  # Required for fabric_workspace_git resource
 }
 
 provider "azurerm" {
   features {}
+  subscription_id = "your-subscription-id"  # Required - get from: az account show --query id -o tsv
 }
 ```
+
+> [!IMPORTANT]
+> The `azurerm` provider requires an explicit `subscription_id`. Without it, you'll get the error:
+> `subscription ID could not be determined and was not specified`
 
 ### Supported Resources
 
@@ -100,7 +106,11 @@ sudo apt update && sudo apt install terraform
 az login
 
 # Set subscription
-az account set --subscription "Your-Subscription-Name"
+az account set --subscription "Your-Subscription-Name" 
+
+e.g. az account set --subscription "VIENNA26" 
+
+
 
 # Verify
 az account show
@@ -141,12 +151,25 @@ terraform {
   }
 }
 
-provider "fabric" {}
+provider "fabric" {
+  preview = true  # Required for Git integration resources
+}
+
 provider "azurerm" {
   features {}
+  # IMPORTANT: subscription_id is required
+  # Get yours with: az account show --query id -o tsv
+  subscription_id = "your-subscription-id"
 }
+
 provider "azuread" {}
 ```
+
+> [!TIP]
+> Get your subscription ID:
+> ```bash
+> az account show --query id -o tsv
+> ```
 
 Create `variables.tf`:
 
@@ -182,19 +205,43 @@ variable "workspace_admins" {
   type        = list(string)
   default     = []
 }
+
+# For using existing capacity (e.g., Trial capacity)
+variable "create_capacity" {
+  description = "Whether to create a new capacity (false = use existing Trial/F-SKU)"
+  type        = bool
+  default     = false  # Set to false for Trial capacity
+}
+
+variable "existing_capacity_id" {
+  description = "ID of existing capacity (find in Workspace Settings → License info)"
+  type        = string
+  default     = ""
+}
 ```
+
+> [!TIP]
+> **Using a Trial Capacity?** Set `create_capacity = false` and provide your capacity ID:
+> 1. Go to Fabric portal → any workspace → Workspace settings
+> 2. Click **License info**
+> 3. Copy the **Capacity ID** (e.g., `CE6C3F15-0103-4A3F-8010-5F28B2D219F4`)
 
 Create `workspaces.tf`:
 
 ```hcl
 # workspaces.tf - Fabric Workspaces
 
+# Determine which capacity to use
+locals {
+  capacity_id = var.create_capacity ? azurerm_fabric_capacity.main[0].id : var.existing_capacity_id
+}
+
 # Development Workspace
 resource "fabric_workspace" "dev" {
-  display_name = "${var.project_name}_${var.environment}"
+  display_name = "${var.project_name}_dev"
   description  = "Development workspace for ${var.project_name}"
   
-  capacity_id = azurerm_fabric_capacity.main.id
+  capacity_id = local.capacity_id
 }
 
 # Test Workspace
@@ -202,7 +249,7 @@ resource "fabric_workspace" "test" {
   display_name = "${var.project_name}_test"
   description  = "Test workspace for ${var.project_name}"
   
-  capacity_id = azurerm_fabric_capacity.main.id
+  capacity_id = local.capacity_id
 }
 
 # Production Workspace
@@ -210,7 +257,7 @@ resource "fabric_workspace" "prod" {
   display_name = "${var.project_name}_prod"
   description  = "Production workspace for ${var.project_name}"
   
-  capacity_id = azurerm_fabric_capacity.main.id
+  capacity_id = local.capacity_id
 }
 ```
 
@@ -218,14 +265,18 @@ Create `capacity.tf`:
 
 ```hcl
 # capacity.tf - Fabric Capacity
+# Only needed if create_capacity = true (creating a new F-SKU capacity)
 
 data "azurerm_resource_group" "fabric" {
-  name = "rg-fabric-${var.environment}"
+  count = var.create_capacity ? 1 : 0
+  name  = "rg-fabric-${var.environment}"
 }
 
 resource "azurerm_fabric_capacity" "main" {
+  count = var.create_capacity ? 1 : 0
+  
   name                = "fc${var.project_name}${var.environment}"
-  resource_group_name = data.azurerm_resource_group.fabric.name
+  resource_group_name = data.azurerm_resource_group.fabric[0].name
   location            = var.location
   
   sku {
@@ -251,35 +302,26 @@ Create `security.tf`:
 # Get current user for admin assignment
 data "azuread_client_config" "current" {}
 
-# Workspace Admin Role Assignment - Development
-resource "fabric_workspace_role_assignment" "dev_admin" {
-  workspace_id = fabric_workspace.dev.id
-  principal = {
-    id   = data.azuread_client_config.current.object_id
-    type = "User"
-  }
-  role = "Admin"
-}
+# NOTE: Workspace creators are automatically assigned as Admin.
+# The role assignments below will fail with "PrincipalAlreadyHasWorkspaceRolePermissions"
+# if the current user created the workspaces. This is expected behavior.
+# Uncomment these only if you need to add OTHER users as admins.
 
-# Workspace Admin Role Assignment - Test
-resource "fabric_workspace_role_assignment" "test_admin" {
-  workspace_id = fabric_workspace.test.id
-  principal = {
-    id   = data.azuread_client_config.current.object_id
-    type = "User"
-  }
-  role = "Admin"
-}
+# # Workspace Admin Role Assignment - Development
+# resource "fabric_workspace_role_assignment" "dev_admin" {
+#   workspace_id = fabric_workspace.dev.id
+#   principal = {
+#     id   = data.azuread_client_config.current.object_id
+#     type = "User"
+#   }
+#   role = "Admin"
+# }
 
-# Workspace Admin Role Assignment - Production
-resource "fabric_workspace_role_assignment" "prod_admin" {
-  workspace_id = fabric_workspace.prod.id
-  principal = {
-    id   = data.azuread_client_config.current.object_id
-    type = "User"
-  }
-  role = "Admin"
-}
+# # Workspace Admin Role Assignment - Test  
+# resource "fabric_workspace_role_assignment" "test_admin" { ... }
+
+# # Workspace Admin Role Assignment - Production
+# resource "fabric_workspace_role_assignment" "prod_admin" { ... }
 
 # Service Principal for CI/CD
 resource "azuread_application" "cicd" {
@@ -358,7 +400,37 @@ output "service_principal" {
 }
 ```
 
-### Step 3.2: Initialize and Apply
+### Step 3.2: Create terraform.tfvars
+
+Create `terraform.tfvars` to configure your deployment:
+
+**Option A: Using Trial Capacity (recommended for workshop)**
+```hcl
+# terraform.tfvars - Workshop Configuration (Trial Capacity)
+
+environment   = "dev"
+project_name  = "deworkshop"
+location      = "westeurope"
+
+# Use existing Trial capacity (don't create new)
+create_capacity      = false
+existing_capacity_id = "YOUR-CAPACITY-ID"  # From Workspace Settings → License info
+```
+
+**Option B: Creating New F-SKU Capacity**
+```hcl
+# terraform.tfvars - Production Configuration (New Capacity)
+
+environment         = "dev"
+project_name        = "deworkshop"
+location            = "westeurope"
+resource_group_name = "rg-fabric-workshop"
+
+create_capacity = true
+capacity_sku    = "F2"
+```
+
+### Step 3.3: Initialize and Apply
 
 ```bash
 # Initialize Terraform
@@ -371,7 +443,10 @@ terraform plan -out=tfplan
 terraform apply tfplan
 ```
 
-### Step 3.3: Verify Deployment
+> [!WARNING]
+> **Expected Role Assignment Errors:** If you see `PrincipalAlreadyHasWorkspaceRolePermissions` errors during apply, this is expected. Workspace creators are automatically Admin, so Terraform can't add the same permission again. The workspaces are still created successfully.
+
+### Step 3.4: Verify Deployment
 
 ```bash
 # Show outputs
@@ -379,6 +454,9 @@ terraform output
 
 # Show specific workspace
 terraform state show fabric_workspace.dev
+
+# Get service principal secret for CI/CD
+terraform output -raw service_principal_client_secret
 ```
 
 ## Part 4: Git Integration via Terraform
@@ -708,9 +786,21 @@ If your Terraform setup isn't working:
    ```
 
 4. **Check for common errors**
-   - Ensure you've copied `terraform.tfvars.example` to `terraform.tfvars`
-   - Verify subscription ID and tenant ID are correct
-   - Check capacity name matches your environment
+
+   | Error | Solution |
+   |-------|----------|
+   | `subscription ID could not be determined` | Add `subscription_id` to the `azurerm` provider block |
+   | `Resource Group was not found` | Set `create_capacity = false` and use `existing_capacity_id` for Trial capacity |
+   | `PrincipalAlreadyHasWorkspaceRolePermissions` | This is expected — workspace creators are auto-admin. Workspaces were created successfully. |
+
+5. **Get your subscription ID**
+   ```bash
+   az account show --query id -o tsv
+   ```
+
+6. **Find your Trial capacity ID**
+   - Fabric portal → any workspace → Workspace settings → License info
+   - Copy the Capacity ID (e.g., `CE6C3F15-0103-4A3F-8010-5F28B2D219F4`)
 
 Still not working? This module is **optional** — you can skip to [Module 1](../configuration/module1-environment-setup.md) and return later.
 

@@ -37,6 +37,7 @@ provider "fabric" {
 # Azure Resource Manager provider
 provider "azurerm" {
   features {}
+  subscription_id = "8c96a0e9-5f08-48be-a40f-7594d825c251"  # VIENNA26
 }
 
 # Azure Active Directory provider

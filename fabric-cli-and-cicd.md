@@ -65,6 +65,7 @@ unpublish_all_orphan_items(workspace)
 - **Dependency-aware deployment ordering**
 - **Orphan item cleanup**
 - **Full workspace synchronization**
+- **27+ supported item types** (Notebook, DataPipeline, Report, SemanticModel, Lakehouse, Warehouse, Environment, and more)
 
 #### 4. CI/CD Pipeline Integration
 ```python
@@ -198,7 +199,9 @@ The workshop demonstrates this progression: start with fabric-cli fundamentals, 
 
 ## References
 
-- [fabric-cli GitHub Repository](https://github.com/microsoft/fabric-cli)
-- [fabric-cicd GitHub Repository](https://github.com/microsoft/fabric-cicd)
+- [fabric-cli GitHub Repository](https://github.com/microsoft/fabric-cli) (Python 3.10-3.13)
+- [fabric-cicd GitHub Repository](https://github.com/microsoft/fabric-cicd) (Python 3.9-3.12)
+- [fabric-cli Documentation](https://microsoft.github.io/fabric-cli/)
+- [fabric-cicd Documentation](https://microsoft.github.io/fabric-cicd/)
 - [Microsoft Fabric Documentation](https://learn.microsoft.com/fabric/)
 - [Workshop Repository](https://github.com/Clouds-on-Mars/fabric-cicd-vienna26)

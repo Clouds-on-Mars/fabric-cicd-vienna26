@@ -6,36 +6,39 @@ data "azuread_client_config" "current" {}
 # -----------------------------------------
 # Workspace Admin Role Assignments
 # -----------------------------------------
+# NOTE: Workspace creators are automatically assigned as Admin.
+# These resources are commented out to avoid "PrincipalAlreadyHasWorkspaceRolePermissions" errors.
+# Uncomment if you need to add additional admins who are NOT the workspace creator.
 
-# Development workspace - current user as admin
-resource "fabric_workspace_role_assignment" "dev_admin" {
-  workspace_id = fabric_workspace.dev.id
-  principal = {
-    id   = data.azuread_client_config.current.object_id
-    type = "User"
-  }
-  role = "Admin"
-}
+# # Development workspace - current user as admin
+# resource "fabric_workspace_role_assignment" "dev_admin" {
+#   workspace_id = fabric_workspace.dev.id
+#   principal = {
+#     id   = data.azuread_client_config.current.object_id
+#     type = "User"
+#   }
+#   role = "Admin"
+# }
 
-# Test workspace - current user as admin
-resource "fabric_workspace_role_assignment" "test_admin" {
-  workspace_id = fabric_workspace.test.id
-  principal = {
-    id   = data.azuread_client_config.current.object_id
-    type = "User"
-  }
-  role = "Admin"
-}
+# # Test workspace - current user as admin
+# resource "fabric_workspace_role_assignment" "test_admin" {
+#   workspace_id = fabric_workspace.test.id
+#   principal = {
+#     id   = data.azuread_client_config.current.object_id
+#     type = "User"
+#   }
+#   role = "Admin"
+# }
 
-# Production workspace - current user as admin
-resource "fabric_workspace_role_assignment" "prod_admin" {
-  workspace_id = fabric_workspace.prod.id
-  principal = {
-    id   = data.azuread_client_config.current.object_id
-    type = "User"
-  }
-  role = "Admin"
-}
+# # Production workspace - current user as admin
+# resource "fabric_workspace_role_assignment" "prod_admin" {
+#   workspace_id = fabric_workspace.prod.id
+#   principal = {
+#     id   = data.azuread_client_config.current.object_id
+#     type = "User"
+#   }
+#   role = "Admin"
+# }
 
 # -----------------------------------------
 # CI/CD Service Principal
