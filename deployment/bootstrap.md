@@ -144,6 +144,14 @@ ls
 > 2. Click Settings () → Admin portal
 > 3. Select "Capacities"
 > 4. Copy the exact capacity name
+>
+> You can use the code below to list all capacities you have access to. Your capacity name should be in this list.
+
+**For Windows (WSL)/macOS/Linux:**
+```bash
+fab ls .capacities
+```
+
 
 ### Step 3: Monitor the Deployment Progress
 
