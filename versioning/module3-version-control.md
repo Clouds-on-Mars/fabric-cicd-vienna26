@@ -159,7 +159,7 @@ For example, the following would be a `workshop.v.fab.works001` repository fork 
 | **Project** | `DEWorkshop-<username>` | Your personal project |
 | **Repository** | `DEWorkshop-<username>` | Your git repository |
 | **Branch** | `main` | Default branch |
-| **Folder** | `` | Folder for your workspace |
+| **Folder** | - | Folder for your workspace |
 
 For example, the following would be a `workshop.v.fab.works001` repository configuration:
 
