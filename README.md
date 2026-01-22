@@ -50,32 +50,33 @@ Before you begin, claim your Fabric login credentials:
 
 ## Workshop Modules
 
-### Morning Session (9:00 - 13:00)
+### Morning Session (09:00–12:30)
 
-| Module | Time | Description |
-|--------|------|-------------|
-| [**1. Environment Setup**](./configuration/module1-environment-setup.md) | 30 min | Install tools, configure workspace, connect Git |
-| [**2. First Deployment**](./deployment/module2-first-deployment.md) | 30 min | Deploy medallion architecture solution |
-| [**3. Version Control**](./versioning/module3-version-control.md) | 30 min | Commit, pull, resolve conflicts |
-| *Break* | 30 min | |
-| [**4. Branch Management**](./deployment/module4-branch-management.md) | 60 min | Feature branches, isolated workspaces |
-| [**5. Deployment Pipelines**](./deployment/module5-deployment-pipelines.md) | 60 min | Stages, variables, automation |
+| Time | Module | Description |
+|------|--------|-------------|
+| 09:00–09:30 | [**1. Environment Setup**](./configuration/module1-environment-setup.md) | Install tools, configure workspace, connect Git |
+| 09:30–10:00 | [**2. First Deployment**](./deployment/module2-first-deployment.md) | Deploy medallion architecture solution |
+| 10:00–10:30 | [**3. Version Control**](./versioning/module3-version-control.md) | Commit, pull, resolve conflicts |
+| 10:30–10:45 | *Break* | |
+| 10:45–11:30 | [**4. Branch Management**](./deployment/module4-branch-management.md) | Feature branches, isolated workspaces |
+| 11:30–12:30 | [**5. Deployment Pipelines**](./deployment/module5-deployment-pipelines.md) | Stages, variables, automation |
+| 12:30–13:30 | *Lunch* | |
 
-### Afternoon Session (14:00 - 17:00)
+### Afternoon Session (13:30–17:00)
 
-| Module | Time | Description |
-|--------|------|-------------|
-| [**6. End-to-End Pipeline**](./deployment/full-run.md) | 45 min | Deploy across dev/test/prod |
-| [**7. Azure DevOps**](./deployment/azuredevops.md) | 45 min | YAML pipelines, service connections |
-| *Break* | 30 min | |
-| [**8. Schema Evolution**](./versioning/data-artifact-changes.md) | 45 min | Handle breaking changes |
-| **Wrap-up & Q&A** | 30 min | Review and next steps |
+| Time | Module | Description |
+|------|--------|-------------|
+| 13:30–14:15 | [**6. End-to-End Pipeline**](./deployment/full-run.md) | Deploy across dev/test/prod |
+| 14:15–15:00 | [**7. Azure DevOps**](./deployment/azuredevops.md) | YAML pipelines, service connections |
+| 15:00–15:15 | *Break* | |
+| 15:15–16:00 | [**8. Schema Evolution**](./versioning/data-artifact-changes.md) | Handle breaking changes |
+| 16:00–17:00 | **Wrap-up & Q&A** | Review, discussion, next steps |
 
 ### Post-Workshop (Optional)
 
-| Module | Time | Description |
-|--------|------|-------------|
-| [**0. Terraform**](./infrastructure/module0-terraform.md) | 30 min | Deploy workspaces via Infrastructure as Code |
+| Module | Description |
+|--------|-------------|
+| [**0. Terraform**](./infrastructure/module0-terraform.md) | Deploy workspaces via Infrastructure as Code |
 
 ---
 
