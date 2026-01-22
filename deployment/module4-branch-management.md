@@ -77,7 +77,7 @@ graph TD
 3. **Configure new workspace**
    - **Name**: `production` (this will be created automatically)
    - **Based on**: `main`
-   - **Workspace name**: `DEWorkshop_<username>_Prod`. Make sure to replace `<username>` with your actual username. For example **`user209`**.
+   - **Workspace name**: `DEWorkshop_<username>_Prod`. Make sure to replace `<username>` with your actual username. For example **`v.fab.works001`**.
    - Click **Branch out**
 
 ![Fabric Branch Out Configuration](../screenshots/branch-out-popup.png)
