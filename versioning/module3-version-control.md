@@ -82,7 +82,7 @@ graph LR
 
 2. **Verify access:**
    - You should see the Azure DevOps dashboard
-   - Click on the "FabConEU_DEWorkshop" project
+   - Click on the "[FABRIC-CICD-VIENNA/workshop](https://dev.azure.com/FABRIC-CICD-VIENNA/workshop)" project
 
 > [!IMPORTANT]
 > Use the exact credentials provided by your instructor for this workshop.
@@ -96,9 +96,9 @@ graph LR
 1. **Navigate to Repos:**
    - Click **Repos** in the left navigation
    - Click on **Files** in the left navigation
-   - You should see the files for the User000 repository by default
+   - You should see the files for the workshop.v.fab.works001 repository by default
 
-![Azure DevOps git repo User000](../screenshots/versioning-start-user000-repo.png)
+![Azure DevOps git repo workshop.v.fab.works001](../screenshots/versioning-start-user000-repo.png)
 
 2. **Fork the repositoru:**
    - Click **Initialize** button in the empty repository
@@ -114,16 +114,16 @@ Make sure you use the correct username. Use capitalization as shown in the examp
 
 2. **Verify repository setup:**
    - You should see a `README.md`, `deploy-to-fabric.py` and `deploy-to-fabric.yml` file in the main branch of your repository.
-   - The repository URL should be: `https://dev.azure.com/FabConEU/FabConEU_DEWorkshop/_git/User###`
+   - The repository URL should be: `https://dev.azure.com/FABRIC-CICD-VIENNA/workshop/_git/User###`
 
-For example, the following would be a `User209` repository fork ready to go:
+For example, the following would be a `workshop.v.fab.works001` repository fork ready to go:
 
 ![Azure DevOps project after initialization](../screenshots/versioning-start-repo-initialized.png)
 
 ### ✅ Exercise 1 Checkpoint
 
 **Before continuing, verify:**
-- [ ] Project `DEWorkshop-<username>` created successfully
+- [ ] Project `workshop.v.fab.worksNNN` created successfully (e.g. `https://dev.azure.com/FABRIC-CICD-VIENNA/workshop/_git/workshop.v.fab.works001`)
 - [ ] Repository initialized with README.md file
 - [ ] You can access Repos section
 - [ ] Main branch is active and visible
@@ -139,7 +139,7 @@ For example, the following would be a `User209` repository fork ready to go:
 ### Step 2.1: Open Git Integration Settings
 
 1. **In your Fabric workspace:**
-   - Ensure you're in `DEWorkshop_<username>`
+   - Ensure you're in `DEWorkshop_<username>` e.g. `DEWorkshop_v.fab.works001@rocksonearth.onmicrosoft.com`
    - Click the ** Workspace Settings** icon (top right)
 
 2. **Navigate to the Git integration tab:**
@@ -155,13 +155,13 @@ For example, the following would be a `User209` repository fork ready to go:
 | Setting | Value | Notes |
 |---------|-------|-------|
 | **Git provider** | Azure DevOps | Select from dropdown |
-| **Organization** | `YourOrgName` | Your workshop org |
+| **Organization** | `FABRIC-CICD-VIENNA` | Your workshop org |
 | **Project** | `DEWorkshop-<username>` | Your personal project |
 | **Repository** | `DEWorkshop-<username>` | Your git repository |
 | **Branch** | `main` | Default branch |
-| **Folder** | `/DE_Workshop` | Folder for your workspace |
+| **Folder** | `` | Folder for your workspace |
 
-For example, the following would be a `User209` repository configuration:
+For example, the following would be a `workshop.v.fab.works001` repository configuration:
 
 ![Fabric connect to git pane](../screenshots/versioning-start-connect-and-sync.png)
 
