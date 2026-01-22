@@ -28,4 +28,6 @@ Thumbs.db
 .vscode/
 .idea/
 
-/fabric-de-worshop/*
+# Workshop generated folders
+fabric-de-workshop/
+fabric-de-worshop/
